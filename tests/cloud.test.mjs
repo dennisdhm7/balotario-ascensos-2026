@@ -160,3 +160,18 @@ test('cada respuesta nueva sincroniza solo el progreso modificado en la sesión'
   assert.equal(changes.length, 3);
   assert.equal(changes.at(-1)[2], '1');
 });
+
+test('historial de bloques acepta 20 preguntas y conserva su tipo sin afectar intentos antiguos', () => {
+  const questions = Array.from({ length: 20 }, (_, i) => ({ id: i + 21, answer: 'B' }));
+  const item = { ...attempt, kind: 'block', questionCount: 20, correct: 1, wrong: 1, blank: 18, score: .75,
+    seconds: 1440, details: Core.attemptDetails(questions, { 21: 'B', 22: 'A' }) };
+  const result = attemptData(item);
+  assert.equal(result.kind, 'block');
+  assert.equal(result.questionCount, 20);
+  assert.equal(result.details.questionIds[0], '21');
+  assert.equal(attemptData({ ...item, seconds: 1441 }), null);
+  assert.equal(attemptData({ ...item, questionCount: 100 }), null);
+  assert.equal(attemptData({ ...item, details: undefined }), null);
+  assert.equal(attemptData({ ...attempt, questionCount: 20 }), null);
+  assert.ok(attemptData(attempt));
+});

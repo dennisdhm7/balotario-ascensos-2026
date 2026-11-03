@@ -4,15 +4,22 @@
 (function (root) {
   const RULES = Object.freeze({ count: 100, seconds: 7200, penalty: 0.25, pass: 70 });
   const BANK_VERSION = 'cgbvp-2026-v1';
-  function remaining(deadline, now = Date.now()) {
-    return Math.max(0, Math.min(RULES.seconds, Math.ceil((deadline - now) / 1000)));
+  const BLOCK_COUNT = 20;
+  function blocks(bank) {
+    const ordered = [...bank].sort((a, b) => a.id - b.id);
+    const result = [];
+    for (let i = 0; i + BLOCK_COUNT <= ordered.length; i += BLOCK_COUNT) result.push(ordered.slice(i, i + BLOCK_COUNT));
+    return result;
+  }
+  function remaining(deadline, now = Date.now(), seconds = RULES.seconds) {
+    return Math.max(0, Math.min(seconds, Math.ceil((deadline - now) / 1000)));
   }
   function grade(questions, answers) {
     const correct = questions.filter(q => answers[q.id] === q.answer).length;
     const wrong = questions.filter(q => answers[q.id] !== undefined && answers[q.id] !== q.answer).length;
     const blank = questions.length - correct - wrong;
     const score = correct - wrong * RULES.penalty;
-    return { correct, wrong, blank, score, passed: score >= RULES.pass };
+    return { correct, wrong, blank, score, passed: score >= questions.length * RULES.pass / RULES.count };
   }
   function normalizeStore(value) {
     const s = value && typeof value === 'object' && !Array.isArray(value) ? value : {};
@@ -20,18 +27,21 @@
       practice: s.practice && typeof s.practice === 'object' && !Array.isArray(s.practice) ? s.practice : {} };
   }
   function restore(saved, bank) {
+    const count = saved?.kind === 'block' ? BLOCK_COUNT : RULES.count;
     if (!saved || typeof saved.id !== 'string' || !Number.isFinite(saved.deadline) ||
-        !Array.isArray(saved.questionIds) || saved.questionIds.length !== RULES.count ||
-        new Set(saved.questionIds).size !== RULES.count) return null;
+        ![undefined, 'full', 'block'].includes(saved.kind) ||
+        !Array.isArray(saved.questionIds) || saved.questionIds.length !== count ||
+        new Set(saved.questionIds).size !== count) return null;
     const questions = saved.questionIds.map(id => bank.find(q => q.id === id));
     if (questions.some(q => !q)) return null;
+    if (saved.kind === 'block' && !blocks(bank).some(group => group.every((q, i) => q.id === saved.questionIds[i]))) return null;
     const answers = {};
     for (const q of questions) {
       const selected = saved.answers?.[q.id];
       if (selected !== undefined && Object.hasOwn(q.options, selected)) answers[q.id] = selected;
     }
     return { ...saved, questions, answers,
-      index: Number.isInteger(saved.index) ? Math.max(0, Math.min(RULES.count - 1, saved.index)) : 0 };
+      index: Number.isInteger(saved.index) ? Math.max(0, Math.min(count - 1, saved.index)) : 0 };
   }
   function updateMistakes(practice, questions, answers, date = Date.now()) {
     const result = { ...practice };
@@ -69,7 +79,7 @@
     }
     return result;
   }
-  const api = { RULES, BANK_VERSION, remaining, grade, normalizeStore, restore, updateMistakes,
+  const api = { RULES, BANK_VERSION, BLOCK_COUNT, blocks, remaining, grade, normalizeStore, restore, updateMistakes,
     attemptDetails, validPractice, comparePractice, mergePractice };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.QuizCore = api;

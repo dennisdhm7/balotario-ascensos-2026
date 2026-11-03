@@ -202,3 +202,85 @@ test('conflictos de progreso con la misma fecha convergen independientemente del
   assert.deepEqual(Core.mergePractice(a, b), Core.mergePractice(b, a));
   assert.deepEqual(Core.mergePractice(a, { 201: { correct: false, date: 100 }, 1: { correct: 'false', date: 101 } }), a);
 });
+
+test('los 10 bloques cubren las 200 preguntas en orden, sin saltos ni repeticiones', () => {
+  const groups = Core.blocks([...bank].reverse());
+  assert.equal(groups.length, 10);
+  assert.deepEqual(groups.flat().map(q => q.id), Array.from({ length: 200 }, (_, i) => i + 1));
+  groups.forEach((questions, i) => {
+    assert.equal(questions.length, 20);
+    assert.equal(questions[0].id, i * 20 + 1);
+    assert.equal(questions.at(-1).id, (i + 1) * 20);
+  });
+});
+
+test('práctica del bloque respeta selección, corrige inmediatamente y actualiza repaso', async () => {
+  const app = await browser();
+  assert.equal(app.elements.get('blockSelect').children.length, 10);
+  app.elements.get('blockSelect').value = '1';
+  app.run("start('blockPractice'); choose(Object.keys(session[0].options).find(k=>k!==session[0].answer))");
+  assert.deepEqual(Array.from(app.run('session.map(q=>q.id)')), Array.from({ length: 20 }, (_, i) => i + 21));
+  assert.equal(app.elements.get('timer').textContent, 'Sin límite');
+  assert.match(app.elements.get('feedback').textContent, /Respuesta correcta/);
+  assert.equal(app.run('getStore().practice[21].correct'), false);
+  app.run('finish(true)');
+  assert.equal(app.elements.get('score').textContent, '0 / 20');
+  assert.equal(app.run('getStore().history.length'), 0);
+  app.run("start('mistakes')");
+  assert.equal(app.run('session[0].id'), 21);
+});
+
+test('simulacro por bloques aplica 24 minutos, penalización, blancos y aprobación desde 14', async () => {
+  const app = await browser();
+  app.elements.get('blockSelect').value = '9';
+  app.run("start('blockExam')");
+  assert.equal(app.run('session[0].id'), 181);
+  assert.equal(app.run('session.at(-1).id'), 200);
+  assert.equal(app.elements.get('timer').textContent, '24:00');
+  assert.equal(app.run('getStore().activeExam.kind'), 'block');
+  app.run("for(index=0;index<19;index++){choose(index<15?session[index].answer:Object.keys(session[index].options).find(k=>k!==session[index].answer))}");
+  assert.equal(app.elements.get('feedback').textContent, '');
+  app.run('finish(true)');
+  assert.equal(app.elements.get('score').textContent, '14.00 / 20');
+  assert.equal(app.elements.get('status').textContent, '¡APROBADO!');
+  const saved = app.run('getStore().history[0]');
+  assert.equal(saved.questionCount, 20);
+  assert.equal(saved.kind, 'block');
+  assert.equal(saved.blank, 1);
+  assert.equal(saved.details.questionIds.length, 20);
+  assert.equal(Object.keys(saved.details.answers).length, 19);
+  assert.equal(app.run('Object.keys(getStore().practice).length'), 19);
+});
+
+test('simulacro por bloques permite borrar y recuperar respuestas, y expira a los 24 minutos', async () => {
+  const app = await browser();
+  app.elements.get('blockSelect').value = '2';
+  app.run("start('blockExam'); choose(session[0].answer)");
+  app.elements.get('clearAnswer').onclick();
+  assert.equal(app.run('countAnswered()'), 0);
+  app.run('index=3; choose(session[index].answer)');
+  const again = await browser(app.storage, 1060000);
+  assert.equal(again.run('mode'), 'blockExam');
+  assert.equal(again.run('index'), 3);
+  assert.equal(again.run('session[0].id'), 41);
+  assert.equal(again.run('remaining'), 1380);
+  again.advance(1380001);
+  again.run('checkDeadline()');
+  assert.equal(again.run('getStore().history[0].seconds'), 1440);
+  assert.equal(again.run('getStore().history[0].blank'), 19);
+  assert.equal(again.run('getStore().activeExam'), undefined);
+  assert.equal(again.elements.get('status').textContent, 'NO APROBADO');
+});
+
+test('rechaza bloques inválidos y mantiene la recuperación del simulacro anterior', async () => {
+  const app = await browser();
+  app.elements.get('blockSelect').value = '10';
+  app.run("start('blockExam')");
+  assert.equal(app.run('session.length'), 0);
+  app.run("start('exam')");
+  app.elements.get('blockSelect').value = '1';
+  app.run("start('blockExam')");
+  assert.equal(app.run('mode'), 'exam');
+  assert.equal(app.run('session.length'), 100);
+  assert.equal(Core.restore({ id: 'bad', deadline: 1000, kind: 'block', questionIds: bank.slice(1, 21).map(q => q.id) }, bank), null);
+});

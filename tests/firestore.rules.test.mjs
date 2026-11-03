@@ -134,3 +134,20 @@ test('adaptador real: reintentos idempotentes y progreso convergente entre dispo
   ]);
   assert.equal((await getDoc(doc(a, 'users/devices/practice/2'))).data().correct, true);
 });
+
+test('historial de bloques admite 20 preguntas, mantiene el aislamiento y rechaza reglas incoherentes', async () => {
+  const a = db('blocks');
+  const questions = Array.from({ length: 20 }, (_, i) => ({ id: i + 21, answer: 'B' }));
+  const value = { ...data(), kind: 'block', questionCount: 20, correct: 1, wrong: 1, blank: 18, score: .75,
+    seconds: 1440, details: Core.attemptDetails(questions, { 21: 'B', 22: 'A' }) };
+  await assertSucceeds(setDoc(doc(a, 'users/blocks/attempts/valid'), value));
+  await assertFails(getDoc(doc(db('B'), 'users/blocks/attempts/valid')));
+  const invalid = [
+    { ...value, seconds: 1441 }, { ...value, questionCount: 100 }, { ...value, blank: 98 },
+    { ...value, kind: 'unknown' }, { ...value, details: details() },
+    { ...data(), questionCount: 20 }, { ...data(), kind: 'block' }
+  ];
+  for (const [i, row] of invalid.entries()) await assertFails(setDoc(doc(a, `users/blocks/attempts/invalid-${i}`), row));
+  const summary = { ...value }; delete summary.details;
+  await assertFails(setDoc(doc(a, 'users/blocks/attempts/no-detail'), summary));
+});

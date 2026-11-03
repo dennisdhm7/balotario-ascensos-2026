@@ -67,7 +67,8 @@ async function initialize() {
       const list = document.createElement('ol');
       for (const row of rows) {
         const item = document.createElement('li');
-        item.textContent = `${new Date(row.date).toLocaleString('es-PE')} · ${row.score.toFixed(2)} puntos · ${row.correct} correctas, ${row.wrong} incorrectas, ${row.blank} en blanco · ${Math.floor(row.seconds / 60)} min`;
+        const title = row.kind === 'block' ? `Bloque ${row.details.questionIds[0]}–${row.details.questionIds.at(-1)}` : 'Simulacro de 100';
+        item.textContent = `${new Date(row.date).toLocaleString('es-PE')} · ${title} · ${row.score.toFixed(2)} / ${row.kind === 'block' ? 20 : 100} puntos · ${row.correct} correctas, ${row.wrong} incorrectas, ${row.blank} en blanco · ${Math.floor(row.seconds / 60)} min`;
         if (row.details) {
           const button = document.createElement('button'), detail = document.createElement('div');
           button.type = 'button'; button.className = 'outline'; button.textContent = 'Revisar respuestas';

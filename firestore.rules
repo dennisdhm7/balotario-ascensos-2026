@@ -7,26 +7,29 @@ service cloud.firestore {
     }
     function validAttempt() {
       let d = request.resource.data;
+      let block = d.get('kind', 'full') == 'block';
+      let count = block ? 20 : 100;
       return d.keys().hasAll(['date', 'score', 'correct', 'wrong', 'blank', 'seconds', 'createdAt'])
-        && d.keys().hasOnly(['date', 'score', 'correct', 'wrong', 'blank', 'seconds', 'createdAt', 'details'])
+        && d.keys().hasOnly(['date', 'score', 'correct', 'wrong', 'blank', 'seconds', 'createdAt', 'details', 'kind', 'questionCount'])
+        && ((!('kind' in d) && !('questionCount' in d)) || (block && d.questionCount == 20 && 'details' in d))
         && d.date is int && d.date >= 0
-        && d.correct is int && d.correct >= 0 && d.correct <= 100
-        && d.wrong is int && d.wrong >= 0 && d.wrong <= 100
-        && d.blank is int && d.blank >= 0 && d.blank <= 100
-        && d.correct + d.wrong + d.blank == 100
+        && d.correct is int && d.correct >= 0 && d.correct <= count
+        && d.wrong is int && d.wrong >= 0 && d.wrong <= count
+        && d.blank is int && d.blank >= 0 && d.blank <= count
+        && d.correct + d.wrong + d.blank == count
         && d.score is number && d.score == d.correct - d.wrong * 0.25
-        && d.seconds is int && d.seconds >= 0 && d.seconds <= 7200
+        && d.seconds is int && d.seconds >= 0 && d.seconds <= (block ? 1440 : 7200)
         && d.createdAt == request.time
-        && (!('details' in d) || validDetails(d.details));
+        && (!('details' in d) || validDetails(d.details, count));
     }
-    function validDetails(d) {
+    function validDetails(d, count) {
       return d is map
         && d.keys().hasAll(['bankVersion', 'questionIds', 'answers', 'answerKey'])
         && d.keys().hasOnly(['bankVersion', 'questionIds', 'answers', 'answerKey'])
         && d.bankVersion is string && d.bankVersion.size() > 0 && d.bankVersion.size() <= 80
-        && d.questionIds is list && d.questionIds.size() == 100 && d.questionIds.toSet().size() == 100
+        && d.questionIds is list && d.questionIds.size() == count && d.questionIds.toSet().size() == count
         && d.answers is map && d.answerKey is map
-        && d.answerKey.size() == 100 && d.answerKey.keys().hasAll(d.questionIds)
+        && d.answerKey.size() == count && d.answerKey.keys().hasAll(d.questionIds)
         && d.answers.keys().hasOnly(d.questionIds)
         && d.answers.values().hasOnly(['A', 'B', 'C', 'D'])
         && d.answerKey.values().hasOnly(['A', 'B', 'C', 'D']);

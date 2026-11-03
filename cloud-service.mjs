@@ -1,25 +1,33 @@
 // Lógica independiente del DOM; el adaptador Firebase se inyecta para las pruebas.
 export function attemptData(item) {
+  const block = item?.kind === 'block', count = block ? 20 : 100;
+  if ((item?.kind !== undefined && !block) || (block && item.questionCount !== 20) || (!block && item?.questionCount !== undefined)) return null;
   const fields = ['date', 'score', 'correct', 'wrong', 'blank', 'seconds'];
   if (!item || !fields.every(k => Number.isFinite(item[k])) ||
       !['correct', 'wrong', 'blank', 'seconds', 'date'].every(k => Number.isInteger(item[k])) ||
-      item.date < 0 || item.seconds < 0 || item.seconds > 7200 ||
+      item.date < 0 || item.seconds < 0 || item.seconds > (block ? 1440 : 7200) ||
       item.correct < 0 || item.wrong < 0 || item.blank < 0 ||
-      item.correct + item.wrong + item.blank !== 100 || item.score !== item.correct - item.wrong * .25) return null;
+      item.correct + item.wrong + item.blank !== count || item.score !== item.correct - item.wrong * .25) return null;
   const data = Object.fromEntries(fields.map(k => [k, item[k]]));
+  if (block) {
+    if (!item.details) return null;
+    Object.assign(data, { kind: 'block', questionCount: 20 });
+  }
   if (item.details !== undefined) {
     const d = item.details;
     const letters = ['A', 'B', 'C', 'D'];
     const map = value => value && typeof value === 'object' && !Array.isArray(value);
     if (!d || typeof d.bankVersion !== 'string' || !d.bankVersion.length || d.bankVersion.length > 80 ||
-        !Array.isArray(d.questionIds) || d.questionIds.length !== 100 || new Set(d.questionIds).size !== 100 ||
+        !Array.isArray(d.questionIds) || d.questionIds.length !== count || new Set(d.questionIds).size !== count ||
         !d.questionIds.every(id => typeof id === 'string' && /^([1-9]|[1-9][0-9]|1[0-9]{2}|200)$/.test(id)) ||
-        !map(d.answers) || !map(d.answerKey) || Object.keys(d.answerKey).length !== 100 ||
+        !map(d.answers) || !map(d.answerKey) || Object.keys(d.answerKey).length !== count ||
         !d.questionIds.every(id => letters.includes(d.answerKey[id])) ||
         !Object.entries(d.answers).every(([id, letter]) => d.questionIds.includes(id) && letters.includes(letter))) return null;
     const correct = d.questionIds.filter(id => d.answers[id] === d.answerKey[id]).length;
     const wrong = Object.keys(d.answers).length - correct;
-    if (correct !== data.correct || wrong !== data.wrong || 100 - correct - wrong !== data.blank) return null;
+    if (block && (!((Number(d.questionIds[0]) - 1) % 20 === 0) ||
+        !d.questionIds.every((id, i) => Number(id) === Number(d.questionIds[0]) + i))) return null;
+    if (correct !== data.correct || wrong !== data.wrong || count - correct - wrong !== data.blank) return null;
     data.details = { bankVersion: d.bankVersion, questionIds: [...d.questionIds], answers: { ...d.answers }, answerKey: { ...d.answerKey } };
   }
   return data;

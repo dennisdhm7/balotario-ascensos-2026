@@ -12,7 +12,8 @@ La clave de respuestas procede del balotario proporcionado y no ha sido verifica
 
 Herramienta de autoestudio no oficial. El modo invitado funciona sin configurar Firebase; las cuentas e historial en línea son opcionales.
 
-- Simulacro de 100 preguntas distintas, elegidas aleatoriamente, con 120 minutos de duración.
+- Simulacro completo de 100 preguntas distintas, elegidas aleatoriamente, con 120 minutos de duración.
+- Diez bloques consecutivos de 20 preguntas: 1–20, 21–40, …, 181–200, siempre en orden. Cada bloque ofrece práctica con corrección inmediata o un simulacro de 24 minutos, corrección al finalizar y aprobación desde 14/20. Conserva +1 por correcta, −0.25 por incorrecta y 0 en blanco. Estas condiciones proporcionales son de autoestudio.
 - Puntaje: +1 por correcta, −0.25 por incorrecta y 0 por pregunta en blanco. Aprobación desde 70; el puntaje puede ser negativo.
 - En el simulacro puedes cambiar una respuesta o usar «Dejar en blanco». En práctica, la corrección inmediata mantiene bloqueada la respuesta.
 - El intento se guarda con su orden, respuestas, posición y fecha límite. Se recupera automáticamente al recargar. Salir o cerrar la página no pausa el tiempo; si venció, se finaliza al recuperarlo.
@@ -85,7 +86,7 @@ Para revisión manual sirve la carpeta por HTTP (por ejemplo, `python -m http.se
 Los intentos nuevos contienen, además del resumen, un mapa `details`:
 
 - `bankVersion`: `cgbvp-2026-v1`.
-- `questionIds`: 100 identificadores como cadenas, en el orden del intento.
+- `questionIds`: 100 identificadores en el simulacro completo o 20 en un bloque, como cadenas y en el orden del intento.
 - `answers`: mapa de identificador a opción elegida (`A`, `B`, `C`, `D`). Las preguntas sin responder no tienen entrada.
 - `answerKey`: mapa de identificador a opción correcta al finalizar, conservado para futuras revisiones.
 
@@ -105,3 +106,16 @@ Comprobación manual sugerida, después de actualizar las reglas:
 4. Abre la misma cuenta en otro dispositivo, consulta el intento y entra en **Repasar errores**.
 5. Corrige un error allí y vuelve al primer dispositivo: al iniciar un nuevo repaso ya no debe aparecer ese error.
 6. Prueba perder y recuperar conexión; el progreso local pendiente debe sincronizarse. Con otra cuenta, ninguno de estos datos debe aparecer.
+
+
+### Práctica y simulacros por bloques de 20
+
+En la tarjeta **Bloques de 20 preguntas**, selecciona el rango que deseas estudiar. Los diez rangos cubren las 200 preguntas sin mezclarlas ni repetirlas entre bloques.
+
+- **Practicar el bloque**: sin límite de tiempo, corrección inmediata y resultado de aciertos sobre 20. Actualiza el progreso por pregunta y el repaso; no crea un intento de examen en el historial.
+- **Simulacro del bloque**: 24 minutos (proporcionales a 120 minutos por 100 preguntas), +1 por correcta, −0.25 por incorrecta, 0 en blanco y aprobación desde 14 puntos. Permite cambiar y borrar respuestas. Se recupera al recargar con la misma fecha límite y actualiza el historial y el repaso al finalizar.
+- Si existe un simulacro pendiente, se recupera antes de permitir iniciar otra sesión; también se conservan los borradores de 100 preguntas guardados con versiones anteriores.
+- El historial distingue el simulacro completo de los bloques, cuyo resultado se muestra sobre 20. Los documentos de bloques incluyen `kind: 'block'`, `questionCount: 20` y sus 20 respuestas/claves en `details`. Los documentos antiguos de 100 preguntas siguen siendo compatibles.
+- Para sincronizar estos nuevos simulacros de 20 preguntas, vuelve a aplicar **la versión actual de `firestore.rules`** en Firebase Console. Las reglas anteriores solo admiten resúmenes de 100 preguntas. Las reglas de práctica por pregunta no cambian.
+
+Las pruebas automáticas comprueban los diez rangos, práctica, puntuación sobre 20, aprobación, recuperación, vencimiento a los 24 minutos, compatibilidad con 100 preguntas y validación/aislamiento en Firestore.
