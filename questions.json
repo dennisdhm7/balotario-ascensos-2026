@@ -1,0 +1,2202 @@
+[
+  {
+    "id": 1,
+    "question": "Según el registro de asistencia del Curso de Formación Básica, ¿cuántas tardanzas constituyen una falta?",
+    "options": {
+      "A": "2 tardanzas",
+      "B": "3 tardanzas",
+      "C": "4 tardanzas",
+      "D": "5 tardanzas"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál es la nota mínima aprobatoria requerida tanto para el Promedio Final de Módulo como para la Evaluación Final del curso?",
+    "options": {
+      "A": "12",
+      "B": "13",
+      "C": "14",
+      "D": "15"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 3,
+    "question": "¿Qué cantidad de faltas no consecutivas a lo largo de los tres primeros módulos amerita la separación automática del aspirante en curso?",
+    "options": {
+      "A": "4 faltas",
+      "B": "6 faltas",
+      "C": "8 faltas",
+      "D": "10 faltas"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es la tolerancia máxima permitida para que un aspirante ingrese a una lección?",
+    "options": {
+      "A": "5 minutos",
+      "B": "10 minutos",
+      "C": "15 minutos",
+      "D": "20 minutos"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 5,
+    "question": "En cuanto a la presentación personal, ¿qué uniforme debe usar obligatoriamente el aspirante en curso durante las estaciones prácticas?",
+    "options": {
+      "A": "Equipo de protección personal estructural completo",
+      "B": "Uniforme de faena (overol rojo o pantalón y polo rojo, con borceguíes negros)",
+      "C": "Ropa deportiva institucional (buzo negro y polo rojo)",
+      "D": "Uniforme de gala de la compañía"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 6,
+    "question": "El lema institucional del CGBVP reglamentado en el Congreso Nacional de 1957 representa la razón de ser del bombero. ¿Cuál es este lema?",
+    "options": {
+      "A": "Valor, Disciplina, Honor",
+      "B": "Honor, Lealtad, Abnegación",
+      "C": "Dios, Patria, Humanidad",
+      "D": "Respeto, Tradición, Servicio"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 7,
+    "question": "Según el Código de Ética del CGBVP, el valor que exige que la persona se comporte en forma coherente entre lo que piensa, siente y hace, rechazando la hipocresía, se denomina:",
+    "options": {
+      "A": "Honestidad",
+      "B": "Laboriosidad",
+      "C": "Lealtad",
+      "D": "Integridad"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 8,
+    "question": "De acuerdo con el manual de ética, los valores de Honestidad, Veracidad y Laboriosidad se inspiran históricamente en:",
+    "options": {
+      "A": "El código de los bomberos romanos (vigiles)",
+      "B": "Los valores del imperio incaico (Ama Sua, Ama Llulla, Ama Quella)",
+      "C": "El reglamento de la primera Compañía Chalaca N° 1",
+      "D": "La Constitución Política del Perú"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 9,
+    "question": "¿Cuáles son las características oficiales de la Bandera Institucional del CGBVP?",
+    "options": {
+      "A": "Forma rectangular de color blanco con el escudo institucional al centro.",
+      "B": "Forma rectangular de color rojo, proporción de 3 a 2, con el escudo institucional al centro.",
+      "C": "Forma cuadrada de color rojo con letras doradas.",
+      "D": "Forma rectangular bicolor (rojo y blanco) con la insignia de la DIGEFA al centro."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 10,
+    "question": "¿En qué documento oficial están plasmadas las normas de comportamiento, principios y valores éticos que orientan el accionar de todos los integrantes del CGBVP?",
+    "options": {
+      "A": "Reglamento de Uniformes y Condecoraciones",
+      "B": "Código de Ética del CGBVP",
+      "C": "Doctrina de Seguridad Ciudadana",
+      "D": "Manual de Comando de Incidentes"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 11,
+    "question": "¿Cuál es la compañía de bomberos peruana legalmente constituida más antigua de la que se tiene registro, fundada el 28 de agosto de 1860?",
+    "options": {
+      "A": "Compañía Chalaca N° 1",
+      "B": "Compañía Italiana Roma N° 1",
+      "C": "Compañía de Bomberos Voluntarios Paita (hoy N° 31)",
+      "D": "Compañía Municipal Lima"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 12,
+    "question": "¿Quién es considerado el Primer Héroe del Cuerpo General de Bomberos Voluntarios del Perú, inmolado trágicamente en la Torre de la Merced durante el Combate del Dos de Mayo?",
+    "options": {
+      "A": "Emilio Longhi",
+      "B": "José Gálvez Egusquiza",
+      "C": "Antonio Alarco Espinosa",
+      "D": "Giuseppe Perfumo"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 13,
+    "question": "Por Decreto Legislativo y leyes posteriores, ¿qué fecha se instituyó oficialmente como el Día del Bombero Voluntario del Perú?",
+    "options": {
+      "A": "2 de mayo",
+      "B": "14 de febrero",
+      "C": "13 de enero",
+      "D": "5 de diciembre"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 14,
+    "question": "El 14 de febrero de 1931, cinco bomberos de las compañías Cosmopolita, Salvadora Lima y France fallecieron al ser sepultados por derrumbes en un gran incendio en el centro de Lima. A este evento se le conoce históricamente como:",
+    "options": {
+      "A": "Los Trece Garibaldinos",
+      "B": "El Combate del Dos de Mayo",
+      "C": "Los Mártires de Plumereros",
+      "D": "El Incendio del Agustino"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 15,
+    "question": "El 30 de enero de 1954 se instaló el Primer Directorio Ejecutivo Titular del CGBVP unificado. ¿Quién fue el primer Comandante General de esta organización nacional?",
+    "options": {
+      "A": "Nicanor Masaveu",
+      "B": "Oreste del Sante Molfino",
+      "C": "Delfín Puccio Ulloa",
+      "D": "José Miguel Corzo Moreno"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 16,
+    "question": "¿Qué órgano del CGBVP tiene la función autónoma de investigar, juzgar y sancionar las faltas o infracciones que cometan los bomberos en el desempeño de sus funciones?",
+    "options": {
+      "A": "La Inspectoría General",
+      "B": "El Consejo Nacional de Disciplina",
+      "C": "La Dirección de Prevención e Investigación",
+      "D": "El Consejo de Oficiales Generales"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 17,
+    "question": "Según el Régimen de Personal, ¿cómo se clasifica a la persona natural que, desempeñando la actividad de su profesión, presta apoyo a los fines y acciones institucionales del CGBVP?",
+    "options": {
+      "A": "Bombero Activo",
+      "B": "Bombero Asimilado",
+      "C": "Bombero en Retiro",
+      "D": "Aspirante Mayor de edad"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 18,
+    "question": "En el orden jerárquico del CGBVP, ¿cuáles de los siguientes grados pertenecen a la categoría de \"Oficiales Superiores\"?",
+    "options": {
+      "A": "Brigadier General y Brigadier Mayor",
+      "B": "Capitán, Teniente y Subteniente",
+      "C": "Brigadier y Teniente Brigadier",
+      "D": "Seccionario y Aspirante"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 19,
+    "question": "¿Cuál es el organismo público ejecutor, adscrito al Ministerio del Interior, que ejerce la rectoría en materia de prevención y proporciona bienes y servicios al CGBVP?",
+    "options": {
+      "A": "Dirección General de Formación Académica (DIGEFA)",
+      "B": "Intendencia Nacional de Bomberos del Perú (INBP)",
+      "C": "Centro de Operaciones de Emergencia (COE)",
+      "D": "Dirección General de Operaciones (DIGO)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 20,
+    "question": "¿Qué se entiende por \"Jornada Voluntaria\" según el Reglamento Interno de Funcionamiento del CGBVP?",
+    "options": {
+      "A": "Un turno de 24 horas remuneradas en una emergencia declarada.",
+      "B": "El servicio prestado a título gratuito, que incluye asistencia a la sede, atención a emergencias, guardias nocturnas, actividades administrativas e instrucción.",
+      "C": "El periodo de prueba de 6 meses que debe cumplir un aspirante.",
+      "D": "La guardia obligatoria que se realiza únicamente los fines de semana."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 21,
+    "question": "Según la definición científica del manual, ¿qué es el fuego?",
+    "options": {
+      "A": "Una reacción física que transforma líquidos en gases tóxicos.",
+      "B": "Una reacción química de oxidación de los materiales combustibles que genera el desprendimiento de energía en forma de luz y calor.",
+      "C": "El paso de la materia de estado sólido a gaseoso mediante fricción mecánica.",
+      "D": "La combinación de energía nuclear y química en espacios confinados."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 22,
+    "question": "Para que los materiales puedan quemarse e iniciar la combustión, ¿en qué estado físico deben encontrarse obligatoriamente?",
+    "options": {
+      "A": "Sólido",
+      "B": "Líquido",
+      "C": "Plasma",
+      "D": "Gaseoso"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 23,
+    "question": "Cuando se aplica calor a un combustible sólido, este sufre un cambio químico que provoca la liberación de gases. ¿Cómo se denomina este proceso?",
+    "options": {
+      "A": "Vaporización",
+      "B": "Fusión",
+      "C": "Pirólisis",
+      "D": "Deflagración"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 24,
+    "question": "¿Cómo se clasifica el tipo de energía que se transfiere entre dos cuerpos que tienen diferente temperatura?",
+    "options": {
+      "A": "Energía Mecánica",
+      "B": "Energía Electromagnética",
+      "C": "Energía Calorífica",
+      "D": "Energía Cinética"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 25,
+    "question": "¿Qué término describe una reacción exotérmica que se propaga a través de los gases ardientes hacia un material que todavía no ha entrado en reacción?",
+    "options": {
+      "A": "Corrosión",
+      "B": "Vaporización",
+      "C": "Deflagración",
+      "D": "Oxidación lenta"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 26,
+    "question": "El manual presenta una lista de oxidantes comunes. ¿Cuál de las siguientes sustancias se utiliza convencionalmente para la purificación de agua?",
+    "options": {
+      "A": "Hipoclorito de calcio",
+      "B": "Cloro en estado gaseoso",
+      "C": "Nitrato de amonio",
+      "D": "Peróxido de hidrógeno"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 27,
+    "question": "¿Qué término es el más preciso en el servicio de bomberos para referirse a la remoción sistemática del aire caliente, humo y gases de una estructura para sustituirlos por aire fresco?",
+    "options": {
+      "A": "Extracción forzada",
+      "B": "Ventilación táctica",
+      "C": "Circulación convectiva",
+      "D": "Presurización de ambientes"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 28,
+    "question": "¿Cuáles son los dos métodos principales que se pueden utilizar para conseguir los objetivos de la ventilación?",
+    "options": {
+      "A": "Natural y Forzada",
+      "B": "Positiva y Negativa",
+      "C": "Interna y Externa",
+      "D": "Hidráulica y Química"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 29,
+    "question": "Al efectuar una ventilación horizontal, ¿qué aperturas estructurales se deben abrir primero para crear un punto de salida efectivo?",
+    "options": {
+      "A": "Las aberturas del techo.",
+      "B": "Las puertas y ventanas en el lado de barlovento.",
+      "C": "Las puertas y ventanas en el lado de sotavento.",
+      "D": "Las ventanas del sótano."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 30,
+    "question": "Por medidas de seguridad durante la ventilación vertical, ¿cuántos peldaños debe sobrepasar la escalera por encima de la línea del techo?",
+    "options": {
+      "A": "2 peldaños",
+      "B": "3 peldaños",
+      "C": "5 peldaños",
+      "D": "7 peldaños"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 31,
+    "question": "¿Qué consecuencia grave advierte el manual si un bombero dirige un chorro contraincendios directamente al interior de un agujero de ventilación vertical en el techo?",
+    "options": {
+      "A": "Apagará el fuego de forma inmediata anulando la ventilación.",
+      "B": "Destruirá los apoyos principales de la estructura del techo.",
+      "C": "Forzará el descenso del aire y gases sobrecalentados sobre los bomberos en el interior, pudiendo causar desgracias.",
+      "D": "Romperá la presión positiva de los extractores mecánicos."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 32,
+    "question": "Si un sótano incendiado no posee ventanas a la altura de la calle, ¿cuál es el procedimiento de ventilación recomendado?",
+    "options": {
+      "A": "Aplicar ventilación horizontal rompiendo las paredes laterales.",
+      "B": "Inundar el sótano con espuma.",
+      "C": "Utilizar la ventilación vertical usando rutas naturales como escaleras y huecos de ascensor.",
+      "D": "No ventilar hasta que el fuego se haya extinguido por completo. Módulo III: Lección 26 - Fugas e Incendios en Gases Inflamables"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 33,
+    "question": "En relación con la densidad del aire, ¿cuál es una característica fundamental del Gas Licuado de Petróleo (GLP)?",
+    "options": {
+      "A": "Es igual de denso que el aire.",
+      "B": "Es menos denso que el aire y tiende a subir.",
+      "C": "Es más denso que el aire (el propano 1.5 veces y el butano 2 veces más pesados).",
+      "D": "Carece de densidad al estar comprimido."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 34,
+    "question": "¿Aproximadamente cuántas veces se expande 1 volumen de GLP en estado líquido al convertirse en gas?",
+    "options": {
+      "A": "De 50 a 60 veces",
+      "B": "De 100 a 150 veces",
+      "C": "De 260 a 270 veces",
+      "D": "De 500 a 600 veces"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 35,
+    "question": "Si un bombero o civil sufre exposición de la piel al GLP en estado líquido, ¿qué tipo de lesión provocará debido a que el gas absorbe el calor necesario para vaporizarse?",
+    "options": {
+      "A": "Quemaduras de tercer grado por radiación",
+      "B": "Quemaduras por congelamiento",
+      "C": "Intoxicación cutánea severa",
+      "D": "Asfixia celular"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 36,
+    "question": "Por normativa legal, el GLP carece de olor de forma natural. ¿Qué aditivo se le añade para que el usuario pueda detectar una fuga cuando la concentración alcance el 1% en el aire?",
+    "options": {
+      "A": "Peróxido de hidrógeno",
+      "B": "Etil Mercaptano",
+      "C": "Amoniaco",
+      "D": "Monóxido de carbono"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 37,
+    "question": "¿Cuál es la composición principal del Gas Natural (GN), representando como mínimo el 90% de su mezcla?",
+    "options": {
+      "A": "Butano",
+      "B": "Propano",
+      "C": "Etano",
+      "D": "Metano"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 38,
+    "question": "A diferencia del GLP, ¿cuál es la densidad del Gas Natural en relación con el aire?",
+    "options": {
+      "A": "Es más denso que el aire.",
+      "B": "Es menos denso que el aire (entre 0.55 a 0.65).",
+      "C": "Es exactamente el doble de pesado que el aire.",
+      "D": "Tiene densidad variable según el clima."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 39,
+    "question": "¿Cuáles son los límites de inflamabilidad (Límite Inferior LEL y Límite Superior UEL) correspondientes al Gas Natural (Metano)?",
+    "options": {
+      "A": "LEL 1.5% y UEL 8.5%",
+      "B": "LEL 2.1% y UEL 9.5%",
+      "C": "LEL 5.0% y UEL 15.0%",
+      "D": "LEL 12.5% y UEL 74.0%"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 40,
+    "question": "¿Cuál es el límite superior de explosividad (UEL) del Acetileno, lo que lo convierte en un gas altamente peligroso por su amplio rango de inflamabilidad?",
+    "options": {
+      "A": "15.0%",
+      "B": "28.0%",
+      "C": "75.6%",
+      "D": "82.5%"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 41,
+    "question": "¿Cuál de las siguientes herramientas de corte está impulsada comúnmente por un motor de combustión interna a gasolina y permite cortes rápidos aunque poco precisos en maniobras de ventilación o entrada forzada?",
+    "options": {
+      "A": "Esmeril angular",
+      "B": "Sierra circular o tronzadora",
+      "C": "Cizalla",
+      "D": "Hacha tipo leñador"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 42,
+    "question": "Según el manual, al realizar ventilación mecánica por presión negativa (extractor), ¿cómo debe colocarse el equipo respecto a la dirección del viento natural?",
+    "options": {
+      "A": "En contra de la dirección del viento para crear turbulencia.",
+      "B": "En la misma dirección que sopla el viento natural para evitar que el humo recircule.",
+      "C": "Perpendicular al viento para cortar la presión atmosférica.",
+      "D": "El viento no afecta la eficiencia de un extractor mecánico."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 43,
+    "question": "En la ventilación hidráulica, la punta del pitón con patrón de niebla debe colocarse a una distancia mínima de la abertura (puerta o ventana) equivalente a:",
+    "options": {
+      "A": "1 pie (0.3 m)",
+      "B": "2 pies (0.6 m)",
+      "C": "4 pies (1.2 m)",
+      "D": "6 pies (1.8 m)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 44,
+    "question": "Una de las razones principales para realizar ventilación en un incendio es reducir la posibilidad de una explosión de humo. ¿Cómo se conoce también a este fenómeno?",
+    "options": {
+      "A": "Flashover",
+      "B": "Rollover",
+      "C": "Backdraft",
+      "D": "Slopover"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 45,
+    "question": "¿Cuáles son los cuatro indicadores críticos del comportamiento del fuego que se deben evaluar antes de decidir ventilar una estructura?",
+    "options": {
+      "A": "Temperatura, Presión, Humedad y Viento.",
+      "B": "Humo, Calor, Llama y Flujo de aire.",
+      "C": "Combustible, Oxígeno, Calor y Reacción química.",
+      "D": "Color, Densidad, Altura y Resistencia estructural."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 46,
+    "question": "Según las consideraciones de seguridad al usar extractores y ventiladores, ¿qué tipo de motores deben utilizarse cuando se ventilan atmósferas potencialmente inflamables?",
+    "options": {
+      "A": "Motores de combustión de cuatro tiempos.",
+      "B": "Motores hidráulicos de alta presión.",
+      "C": "Motores eléctricos intrínsecamente seguros.",
+      "D": "Motores neumáticos estándar."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 47,
+    "question": "¿Qué tipo de escalera de incendios consta de una sección base fija y una o más secciones volantes que se deslizan para aumentar su longitud?",
+    "options": {
+      "A": "Escalera plegable",
+      "B": "Escalera de techo",
+      "C": "Escalera de extensión",
+      "D": "Escalera de bisagra"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 48,
+    "question": "En las normas de seguridad para el uso de escaleras, se indica que si un bombero parado de forma erguida frente a la escalera extendida sus brazos a 90°, ¿qué parte de la escalera deben tocar sus manos para asegurar un ángulo correcto (aprox. 75°)?",
+    "options": {
+      "A": "El tercer peldaño contando desde la base.",
+      "B": "Los largueros o el peldaño que se encuentre frente a los hombros.",
+      "C": "El trinquete de seguridad de la sección volante.",
+      "D": "La pared donde se apoya la escalera."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 49,
+    "question": "Para transportar una escalera simple o de techo por un solo bombero, este debe apoyar el larguero superior sobre el hombro y, con la mano de ese brazo, tomar:",
+    "options": {
+      "A": "El peldaño que continúa hacia adelante para controlar la escala.",
+      "B": "El extremo trasero de la escalera.",
+      "C": "El larguero inferior firmemente.",
+      "D": "El segundo peldaño contando desde atrás."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 50,
+    "question": "¿Cómo deben transportarse las escalas, trípodes u otros materiales de estructura alargada cuando el bombero sube por una escalera de incendios?",
+    "options": {
+      "A": "Arrastrándolos mediante una cuerda desde el piso.",
+      "B": "Puestos en el hombro del bombero y rodeados con el mismo brazo, por fuera de la escalera.",
+      "C": "Cruzados sobre la espalda como una mochila.",
+      "D": "Sostenidos con ambas manos frente al pecho."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 51,
+    "question": "Si se va a subir una línea armada (manguera con pitón) por una escalera, ¿cómo debe posicionarse la manguera sobre el bombero?",
+    "options": {
+      "A": "Cruzada diagonalmente por el pecho.",
+      "B": "Enrollada alrededor de la cintura.",
+      "C": "Puesta sobre el hombro del lado de donde viene la línea, sin cruzarse.",
+      "D": "Arrastrada entre las piernas."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 52,
+    "question": "Al llegar a la parte superior de la escalera para trabajar sobre un techo, ¿qué acción recomienda el manual hacer con la manguera para evitar que otros retiren la escalera por error?",
+    "options": {
+      "A": "Atarla al techo con una cuerda.",
+      "B": "Pasar la manguera por dentro de la escalera para indicar que se está usando.",
+      "C": "Dejar la manguera suelta y gritar a la base.",
+      "D": "Presurizarla inmediatamente para aumentar su peso."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 53,
+    "question": "Para que un bombero pueda trabajar desde una escalera (por ejemplo, romper una ventana o dirigir un chorro) utilizando ambas manos, ¿qué procedimiento de seguridad debe realizar para afianzarse si no cuenta con un arnés?",
+    "options": {
+      "A": "Enganchar el brazo izquierdo alrededor del larguero.",
+      "B": "Pasar una pierna entre dos peldaños, enganchando la parte trasera de la rodilla en un peldaño y la punta del pie en el peldaño inferior.",
+      "C": "Amarrarse la cintura al larguero con la driza de la escalera.",
+      "D": "Mantener siempre tres puntos de contacto manual."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 54,
+    "question": "En un rescate utilizando escaleras, si la víctima está consciente y es bajada por un solo bombero, ¿qué parte de la víctima debe salir primero del edificio hacia la escalera?",
+    "options": {
+      "A": "La cabeza.",
+      "B": "Los brazos.",
+      "C": "El torso.",
+      "D": "Las piernas, para lograr la misma posición del bombero."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 55,
+    "question": "Según la filosofía de Conservación de la Propiedad, ¿cómo se definen los \"daños secundarios\" en un incendio?",
+    "options": {
+      "A": "Los daños producidos exclusivamente por la radiación de las llamas.",
+      "B": "Los daños ocasionados por los productos básicos de la combustión (llama, calor y humo).",
+      "C": "Los daños ocasionados por las operaciones ejecutadas para extinguirlo (entrada forzada, ventilación, aplicación de agua).",
+      "D": "Los daños causados por el vandalismo posterior al incendio."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 56,
+    "question": "La tarea de búsqueda y extinción de incendios ocultos o remanentes, así como la conservación de pruebas del origen y causa del fuego, se denomina:",
+    "options": {
+      "A": "Ventilación táctica",
+      "B": "Salvamento primario",
+      "C": "Reacondicionamiento",
+      "D": "Entrada forzada"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 57,
+    "question": "Uno de los principios básicos de la mentalidad conservadora en los bomberos es \"Pensar como el agua\". ¿Qué significa esto operacionalmente?",
+    "options": {
+      "A": "Que se debe aplicar agua en forma de niebla en todas las habitaciones.",
+      "B": "Entender que el agua toma la ruta más fácil, por lo que se deben enviar dotaciones a áreas inferiores para evaluar y controlar daños por agua (drenajes, cubrir con mantas).",
+      "C": "Significa que el bombero debe moverse fluidamente y sin hacer ruido en el interior.",
+      "D": "Que el agua siempre extingue el fuego secundario por sí sola."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 58,
+    "question": "En incendios que afectan el patrimonio histórico (museos, teatros, iglesias), ¿qué acción del agua sobre los materiales se considera potencialmente fatal para obras de arte y libros antiguos?",
+    "options": {
+      "A": "Evaporación instantánea.",
+      "B": "Generación de vapor asfixiante.",
+      "C": "Disolución de colas, tintas, y eliminación o dilución de decoraciones pictóricas.",
+      "D": "Aumento de la temperatura por fricción."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 59,
+    "question": "Según la Norma E.060 del Reglamento Nacional de Edificaciones sobre el \"Concreto Armado\", ¿cómo se define a la \"Viga\"?",
+    "options": {
+      "A": "Elemento estructural empleado para encerrar o separar ambientes.",
+      "B": "Elemento estructural que trabaja fundamentalmente a flexión.",
+      "C": "Elemento estructural para resistir la fuerza que actúa a lo largo de su eje central.",
+      "D": "Elemento estructural que transmite cargas al suelo de fundación."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 60,
+    "question": "¿Cuál de los siguientes sistemas estructurales se define como \"Construcción de muros de albañilería de ladrillo o cemento con elementos perimetrales de concreto reforzado (viguetas y columnetas) que confinan las piezas\"?",
+    "options": {
+      "A": "Albañilería Reforzada",
+      "B": "Albañilería Confinada",
+      "C": "Pórticos Arriostrados",
+      "D": "Edificaciones de Muros de Ductilidad Limitada (EMDL)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 61,
+    "question": "Según la tabla de oxidantes comunes del manual, ¿cuál es el uso común del nitrato de amonio (sólido granular)?",
+    "options": {
+      "A": "Purificación de agua",
+      "B": "Fertilizante",
+      "C": "Cloración de agua en piscinas",
+      "D": "Catalizador en la fabricación de plásticos"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 62,
+    "question": "¿Cómo define el manual a la \"energía potencial\" en el contexto de los combustibles?",
+    "options": {
+      "A": "Es la energía que posee un objeto en movimiento.",
+      "B": "Es la capacidad de realizar un trabajo mecánico a distancia.",
+      "C": "Representa la cantidad de energía que un objeto puede liberar en algún momento en el futuro, basada en su composición química.",
+      "D": "Es la energía que se transfiere entre dos cuerpos con temperatura diferente."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 63,
+    "question": "¿Qué nombre recibe específicamente la energía potencial disponible para su liberación en el proceso de combustión?",
+    "options": {
+      "A": "Calor de combustión",
+      "B": "Energía electromagnética",
+      "C": "Reacción exotérmica",
+      "D": "Energía cinética vibratoria"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 64,
+    "question": "El manual indica que la velocidad a la cual un combustible libera energía a lo largo del tiempo depende de varias variables. ¿Cuál de las siguientes NO es una de las variables mencionadas en el texto?",
+    "options": {
+      "A": "Composición química",
+      "B": "Disposición",
+      "C": "Densidad del combustible",
+      "D": "Presión atmosférica del ambiente Módulo II: Lección 18 - Ventilación en Incendios (Profundización)"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 65,
+    "question": "Aunque los métodos de ventilación natural pueden tener resultados satisfactorios, su eficacia depende de ciertos factores. Según el manual, ¿cuál de los siguientes es uno de esos factores?",
+    "options": {
+      "A": "La potencia del motor de combustión interna.",
+      "B": "La proximidad de las aperturas de ventilación a los lugares donde se encuentra el humo acumulado.",
+      "C": "La presión del agua en el pitón de niebla.",
+      "D": "La hora del día en que ocurre el incendio."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 66,
+    "question": "Durante los preparativos para una ventilación vertical, ¿por qué el manual indica que se deben encender las herramientas eléctricas o a motor antes de subir al techo?",
+    "options": {
+      "A": "Para calentar el motor debido a las bajas temperaturas.",
+      "B": "Para asegurarse de que funcionan, siendo importante apagarlas antes de llevarlas al techo.",
+      "C": "Para alertar al personal en el interior de la estructura sobre la ubicación del corte.",
+      "D": "Para quemar el combustible residual de usos anteriores."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 67,
+    "question": "Al aplicar ventilación forzada mecánica, ¿cuál es la ventaja principal que menciona el manual sobre el uso de extractores y ventiladores de presión positiva?",
+    "options": {
+      "A": "Reducen la temperatura del fuego directamente mediante aspersión de agua.",
+      "B": "Consumen el oxígeno del ambiente, sofocando las llamas.",
+      "C": "Superan los efectos que la humedad, viento y temperatura tienen sobre la ventilación natural, reduciendo significativamente el tiempo requerido para ventilar.",
+      "D": "Reemplazan la necesidad de utilizar equipos de protección respiratoria autónoma (EPRA)."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 68,
+    "question": "Según las características del Gas Licuado de Petróleo (GLP), ¿qué efecto produce en el cuerpo humano cuando es aspirado en una concentración del 10% durante 10 minutos?",
+    "options": {
+      "A": "No produce alteraciones.",
+      "B": "Aturdimiento o vértigo.",
+      "C": "Paro cardiorrespiratorio inmediato.",
+      "D": "Quemaduras en las vías respiratorias."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 69,
+    "question": "¿Cuál es la temperatura de ignición específica del Butano según los datos proporcionados en el manual?",
+    "options": {
+      "A": "480°C",
+      "B": "482°C",
+      "C": "493°C",
+      "D": "1900°C"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 70,
+    "question": "Revisando la tabla de límites de inflamabilidad, ¿cuál es el Límite Inferior de Explosividad (LEL) y el Límite Superior de Explosividad (UEL) del Amoniaco (NH3)?",
+    "options": {
+      "A": "LEL 1.5% y UEL 8.5%",
+      "B": "LEL 4.0% y UEL 75.6%",
+      "C": "LEL 12.5% y UEL 74.0%",
+      "D": "LEL 15.0% y UEL 28.0%"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 71,
+    "question": "De acuerdo con la Lección 26, ¿cuál de las siguientes opciones describe una de las condiciones fundamentales indispensables para que ocurra una explosión tipo BLEVE?",
+    "options": {
+      "A": "Que el gas se encuentre a temperaturas criogénicas inferiores a -160 °C.",
+      "B": "Que exista un líquido confinado en un recipiente a presión por encima de su temperatura de ebullición a presión atmosférica normal.",
+      "C": "Que el contenedor posea ventilación forzada en la base.",
+      "D": "Que el fuego circundante afecte únicamente la fase líquida con agua acumulada."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 72,
+    "question": "Según el manual, la espuma contraincendios extingue o previene el fuego actuando de cuatro modos principales. ¿Cuáles son estos modos?",
+    "options": {
+      "A": "Inhibición, Aislamiento eléctrico, Dilución, Dispersión",
+      "B": "Separación, Enfriamiento, Supresión, Sofocación",
+      "C": "Presurización térmica, Enfriamiento, Sofocación, Retardo",
+      "D": "Sublimación, Radiación, Extracción de oxígeno, Oxidación"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 73,
+    "question": "Según la Lección 27 y la NFPA 11, ¿a qué tasa de dosificación se mezcla habitualmente un concentrado de espuma convencional Clase B sobre derrames de hidrocarburos estándar?",
+    "options": {
+      "A": "Al 0.1%",
+      "B": "Al 1% o 3%",
+      "C": "Al 10%",
+      "D": "Al 25%"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 74,
+    "question": "Existen varios métodos básicos para dosificar el concentrado de espuma con el agua. ¿Cómo se llama el método que utiliza la velocidad del flujo en el punto más angosto de un dispositivo para succionar el concentrado al caudal de agua (efecto Venturi)?",
+    "options": {
+      "A": "Inyección",
+      "B": "Inducción (Eductor)",
+      "C": "Premezcla",
+      "D": "Saturación"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 75,
+    "question": "La espuma contraincendios Clase B es eficaz para dos categorías básicas de líquidos. ¿Cuáles son estas dos categorías?",
+    "options": {
+      "A": "Hidrocarburos y Solventes polares",
+      "B": "Grasas vegetales y Aceites industriales",
+      "C": "Líquidos criogénicos y Gases comprimidos",
+      "D": "Combustibles sólidos y Metales reactivos"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 76,
+    "question": "¿Qué método de aplicación de espuma consiste en dirigir el chorro hacia un muro u objeto elevado cercano para que la espuma descienda suavemente sobre la superficie del combustible?",
+    "options": {
+      "A": "Método de rodaje",
+      "B": "Método de lluvia",
+      "C": "Método de caída",
+      "D": "Método de inyección subsuperficial"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 77,
+    "question": "¿Cuál es el alcance autorizado de los bomberos (primeros respondedores en la extinción) durante la investigación de incendios en la escena?",
+    "options": {
+      "A": "Levantar pruebas, etiquetarlas y enviarlas al laboratorio.",
+      "B": "Detener a personas con actitud sospechosa.",
+      "C": "Tomar declaraciones firmadas de los propietarios o testigos.",
+      "D": "No están autorizados a levantar pruebas ni detener personas; deben localizar al jefe de investigación y facilitarle la información recopilada."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 78,
+    "question": "Al realizar el combate de incendios, para preservar las marcas y pruebas en la escena, ¿qué técnica recomienda el manual respecto al uso del agua?",
+    "options": {
+      "A": "Inundar rápidamente todos los ambientes.",
+      "B": "Usar el \"efecto pitonazo\" sobre las marcas, y golpear el techo sobre el fuego, usando solo tanta agua como sea necesario.",
+      "C": "Usar presión máxima en las paredes para descubrir la estructura interior.",
+      "D": "Direccionar chorros directos continuos a la base de las paredes."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 79,
+    "question": "Dentro de las prioridades tácticas en el combate contra incendios, ¿cuál es la primera prioridad fundamental?",
+    "options": {
+      "A": "Control del incendio",
+      "B": "Búsqueda y Rescate",
+      "C": "Conservación de la propiedad",
+      "D": "Ventilación táctica"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 80,
+    "question": "En ambientes con poca visibilidad y humo denso, el manual recomienda la posición de búsqueda de \"3 puntos\" en lugar de gatear completamente. ¿En qué consiste esta posición?",
+    "options": {
+      "A": "Usar las dos manos y la cabeza como apoyo para avanzar.",
+      "B": "Apoyar dos rodillas y un codo, avanzando lateralmente.",
+      "C": "Mantener una pierna extendida hacia adelante para identificar obstáculos y la otra doblada bajo el cuerpo, manteniendo el torso vertical.",
+      "D": "Arrastrarse boca abajo tocando el suelo con tres partes del abdomen."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 81,
+    "question": "¿Cómo se denomina el equipo asignado y equipado exclusivamente fuera de la estructura para realizar el rescate de bomberos en problemas o caídos en acto de servicio?",
+    "options": {
+      "A": "Equipo de Ataque Inicial",
+      "B": "Equipo de Intervención Rápida (RIC / RIT)",
+      "C": "Cuadrilla de Soporte Vital",
+      "D": "Grupo Táctico de Abastecimiento"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 82,
+    "question": "En la gestión del aire del EPRA, ¿en qué porcentaje aproximado de la capacidad del cilindro se activa de manera estándar la alarma sonora y táctil de bajo volumen (vibrador/pito)?",
+    "options": {
+      "A": "Al 10%",
+      "B": "Al 33% (un tercio del cilindro)",
+      "C": "Al 50%",
+      "D": "Al 75%"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 83,
+    "question": "Antes de intervenir cualquier componente del cuarto de máquinas o intentar abrir las puertas de un ascensor para rescate, ¿cuál es la primera maniobra de seguridad obligatoria?",
+    "options": {
+      "A": "Accionar la palanca de desbloqueo manual del cable tractor.",
+      "B": "Cortar y enclavar (bloquear/etiquetar) el interruptor principal de energía del ascensor.",
+      "C": "Inyectar aceite hidráulico a las zapatas de frenado.",
+      "D": "Aflojar el limitador de velocidad."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 84,
+    "question": "¿Cómo se denomina el mecanismo del cuarto de máquinas del ascensor que permite detener la cabina mediante un paracaídas o sistema de acuñamiento cuando la velocidad sobrepasa determinado valor?",
+    "options": {
+      "A": "Volante inercial",
+      "B": "Limitador de velocidad",
+      "C": "Cuadro de maniobras",
+      "D": "Freno electromagnético"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 85,
+    "question": "Durante el rescate en ascensores SIN movimiento de la cabina, si la distancia entre el nivel del piso del pasillo y la cabina es mayor de 80 cm, ¿hacia dónde establece el manual que debe realizarse la evacuación?",
+    "options": {
+      "A": "Hacia el piso inferior",
+      "B": "Hacia el piso superior",
+      "C": "Hacia la trampilla de rescate en el techo de la cabina",
+      "D": "En esa posición no se debe evacuar hasta mover la cabina manualmente"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 86,
+    "question": "Al trabajar con sistemas de cuerdas, ¿qué medida física indica la severidad de una caída calculando la relación entre la altura de la caída y la longitud de la cuerda desplegada?",
+    "options": {
+      "A": "Fuerza de choque",
+      "B": "Distancia de seguridad",
+      "C": "Factor de caída (FC)",
+      "D": "Ventaja mecánica"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 87,
+    "question": "En el rescate con cuerdas para uso de bomberos (NFPA 1983 / norma institucional), ¿cuál es el factor de seguridad mínimo estándar aplicado a los sistemas de transporte de personas?",
+    "options": {
+      "A": "2 a 1",
+      "B": "5 a 1",
+      "C": "10 a 1 o 15 a 1 (según uso técnico o de uso general)",
+      "D": "25 a 1"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 88,
+    "question": "En los sistemas de Ventaja Mecánica (VM), si se emplea un sistema 3:1, ¿qué significa en términos de esfuerzo y distancia de cuerda?",
+    "options": {
+      "A": "Que por cada metro de cuerda que se tira, la carga sube 3 metros.",
+      "B": "Que por cada 3 metros de cuerda que se tiran, la carga sube 1 metro, reduciendo el esfuerzo a una tercera parte.",
+      "C": "Que requiere 3 bomberos para levantar 1 carga.",
+      "D": "Que la fricción se multiplica 3 veces por cada metro elevado."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 89,
+    "question": "El \"Síndrome del arnés\" o trauma por suspensión es una condición fisiológica crítica por bloqueo del retorno venoso. ¿En qué rango de tiempo de suspensión inmóvil pueden aparecer los síntomas graves?",
+    "options": {
+      "A": "De 5 a 20 minutos",
+      "B": "De 30 a 45 minutos",
+      "C": "A partir de las 2 horas",
+      "D": "A las 4 horas de suspensión"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 90,
+    "question": "Si un paciente está INCONSCIENTE y se sospecha de trauma (lesión en columna cervical), ¿qué maniobra se debe utilizar obligatoriamente para abrir sus vías aéreas?",
+    "options": {
+      "A": "Hiperextensión del cuello",
+      "B": "Maniobra de extensión de la cabeza y elevación mandibular (EXCELM)",
+      "C": "Maniobra de empuje mandibular (EM)",
+      "D": "Compresión cricoidea"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 91,
+    "question": "En la evaluación inicial (GEPONLAS), ¿qué evalúa el acrónimo \"AVDI\" realizado por el tercer APH?",
+    "options": {
+      "A": "Las hemorragias activas.",
+      "B": "El nivel de respuesta del paciente (Alerta, Verbal, Dolor, Inconsciente).",
+      "C": "Las vías aéreas y la ventilación.",
+      "D": "Los signos vitales (Arterial, Venoso, Diastólico, Infeccioso)."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 92,
+    "question": "En la Guía para Trauma realizada por cuatro APH, ¿cuál es la función prioritaria del segundo APH tan pronto como se asegura la escena?",
+    "options": {
+      "A": "Iniciar la oxigenoterapia.",
+      "B": "Colocar la cánula orofaríngea.",
+      "C": "Realizar la fijación de la cabeza del paciente y asumir el comando.",
+      "D": "Buscar hemorragias en las extremidades inferiores."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 93,
+    "question": "En el método de Triage START para incidentes con múltiples víctimas, ¿qué color de etiqueta corresponde a una \"Primera prioridad\" (paciente con estado crítico pero salvable)?",
+    "options": {
+      "A": "Rojo",
+      "B": "Amarillo",
+      "C": "Verde",
+      "D": "Negro"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 94,
+    "question": "Durante la ejecución del método de Triage START, si el APH detecta problemas graves, ¿cuáles son los únicos dos tratamientos permitidos antes de pasar a la siguiente víctima?",
+    "options": {
+      "A": "Aplicación de torniquete e inyección de analgesia.",
+      "B": "Inmovilización cervical y colocación de férulas.",
+      "C": "Abrir las vías aéreas y controlar hemorragias.",
+      "D": "Administrar oxígeno y efectuar RCP completa."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 95,
+    "question": "El método START emplea cuatro criterios para clasificar a las víctimas en menos de un minuto. ¿Cuáles son estos cuatro criterios?",
+    "options": {
+      "A": "Edad, Género, Frecuencia Cardiaca, Presión Arterial",
+      "B": "Marcha (¿puede movilizarse?), Frecuencia Respiratoria, Perfusión, Nivel de respuesta",
+      "C": "Hemorragia, Dolor, Nivel de consciencia, Temperatura",
+      "D": "Pulso, Dilatación pupilar, Color de piel, Reflejos"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 96,
+    "question": "Al atender una Obstrucción de Vías Aéreas por Cuerpo Extraño (OVACE), ¿qué técnica se debe aplicar si la víctima es una mujer embarazada o una persona obesa?",
+    "options": {
+      "A": "Compresiones abdominales (Maniobra de Heimlich)",
+      "B": "Golpes en la espalda estando acostado",
+      "C": "Compresiones torácicas en lugar de compresiones abdominales",
+      "D": "Extracción manual a ciegas"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 97,
+    "question": "De acuerdo con el manual, ¿cómo se denomina a la condición donde el corazón, debido a una falla en su sistema eléctrico, deja de bombear sangre repentinamente y la persona pierde pulso y respiración de forma súbita?",
+    "options": {
+      "A": "Ataque cardiaco",
+      "B": "Paro cardiaco / Infarto cardiaco",
+      "C": "Shock hipovolémico",
+      "D": "Accidente cerebrovascular"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 98,
+    "question": "La Cadena de Supervivencia Extrahospitalaria del adulto consta de 6 eslabones. ¿Cuál es el primer eslabón?",
+    "options": {
+      "A": "RCP de alta calidad temprana",
+      "B": "Activación de la respuesta a emergencias (reconocimiento del paro)",
+      "C": "Desfibrilación rápida",
+      "D": "Soporte vital avanzado"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 99,
+    "question": "En un escenario de RCP, para que las compresiones torácicas sean de buena calidad (RCP de alta calidad), ¿cuál debe ser la frecuencia aplicada por minuto?",
+    "options": {
+      "A": "De 60 a 80 compresiones por minuto",
+      "B": "De 80 a 100 compresiones por minuto",
+      "C": "De 100 a 120 compresiones por minuto",
+      "D": "Más de 130 compresiones por minuto"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 100,
+    "question": "Cuando se están brindando exclusivamente ventilaciones de rescate a un paciente adulto (que tiene pulso pero no respira), ¿con qué frecuencia se debe administrar cada ventilación?",
+    "options": {
+      "A": "Una cada 1 a 2 segundos",
+      "B": "Una cada 5 a 6 segundos (10 a 12 ventilaciones por minuto)",
+      "C": "Una cada 10 a 15 segundos",
+      "D": "Dos ventilaciones seguidas cada 30 segundos"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 101,
+    "question": "Según el manual, ¿cómo se define un \"incendio en estructuras elevadas\"?",
+    "options": {
+      "A": "Incendios desarrollados en edificios comerciales y sótanos.",
+      "B": "Incendios que ocurren en el último piso de cualquier edificación.",
+      "C": "Aquellos incendios que se desarrollan en edificios de más de 4 pisos.",
+      "D": "Incendios en edificios con uso mixto mayores a 10 pisos."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 102,
+    "question": "¿Cuál es la definición reglamentaria de una \"Quinta\" según los tipos de edificación?",
+    "options": {
+      "A": "Edificio destinado exclusivamente al parqueo de vehículos.",
+      "B": "Conjunto de unidades inmobiliarias unifamiliares de propiedad exclusiva, sobre un lote que cuenta con acceso mediante un espacio común o desde la vía pública.",
+      "C": "Edificación de dos a más unidades de vivienda que comparten un solo acceso en común.",
+      "D": "Local destinado para actividades comerciales y artesanales."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 103,
+    "question": "Durante las operaciones tácticas en edificios de altura, ¿cuántos pisos por debajo del incendio se debe establecer al personal y equipo de reserva?",
+    "options": {
+      "A": "1 piso por debajo.",
+      "B": "2 pisos por debajo del incendio.",
+      "C": "3 pisos por debajo del incendio.",
+      "D": "En la planta baja exclusivamente."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 104,
+    "question": "Durante un incendio en edificio, si los ascensores cuentan con \"llave para bomberos\", ¿hasta qué nivel se recomienda controlar y usar estos ascensores de manera segura?",
+    "options": {
+      "A": "Hasta el piso exacto del incendio.",
+      "B": "Hasta 1 piso por debajo del fuego.",
+      "C": "Hasta 2 pisos por abajo del fuego.",
+      "D": "Los ascensores nunca deben usarse."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 105,
+    "question": "¿Cómo se define a un \"Sótano\" en el manual de formación?",
+    "options": {
+      "A": "Cualquier nivel subterráneo destinado al estacionamiento.",
+      "B": "Parte de una edificación cuya superficie superior del techo se encuentra hasta 0.50 m por encima del nivel de la vereda respecto al frente del lote.",
+      "C": "Parte de una estructura ubicada a más de 1 metro por debajo del nivel de la calle.",
+      "D": "Habitaciones cerradas sin iluminación ni ventilación natural."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 106,
+    "question": "Al aplicar la técnica de segregación vial en un incidente vehicular, ¿a qué distancia del vehículo siniestrado se debe empezar a colocar el primer cono de seguridad en forma diagonal?",
+    "options": {
+      "A": "A 30 metros de distancia.",
+      "B": "A 50 metros de distancia.",
+      "C": "A 100 metros de distancia.",
+      "D": "A 150 metros de distancia."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 107,
+    "question": "En el combate de incendios vehiculares (ataque defensivo u ofensivo), ¿cuál es el ángulo de acercamiento recomendado con relación al eje longitudinal del vehículo para evitar la ruta de proyección de objetos?",
+    "options": {
+      "A": "Frontalmente a 0° o desde la parte trasera a 180°.",
+      "B": "Lateralmente a 90° exactos.",
+      "C": "En un ángulo de 45°, preferentemente desde el lado opuesto al compartimiento de carga.",
+      "D": "Desde una posición elevada únicamente."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 108,
+    "question": "En la identificación de riesgos en vehículos eléctricos, los cables que transportan alta tensión (que pueden llegar a 650 voltios en CC) están cubiertos con una protección de color:",
+    "options": {
+      "A": "Rojo brillante o negro.",
+      "B": "Amarillo con franjas negras.",
+      "C": "Azul eléctrico o naranja.",
+      "D": "Verde fluorescente."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 109,
+    "question": "Al apagar o desactivar un vehículo eléctrico o híbrido siniestrado, ¿cuánto tiempo puede permanecer energizado el sistema de alto voltaje, período durante el cual se debe evitar tocar los componentes naranjas?",
+    "options": {
+      "A": "De 1 a 2 minutos.",
+      "B": "Hasta 5 a 10 minutos.",
+      "C": "Hasta 30 minutos.",
+      "D": "La energía se disipa instantáneamente."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 110,
+    "question": "De acuerdo con la clasificación del manual, ¿cuál es el punto de inflamación que divide a un \"líquido inflamable\" de un \"líquido combustible\"?",
+    "options": {
+      "A": "22.8 °C",
+      "B": "37.8 °C (Los inflamables tienen menos de 37.8°C y los combustibles igual o mayor a 37.8°C).",
+      "C": "60.0 °C",
+      "D": "93.3 °C"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 111,
+    "question": "En la estructura interna de una cisterna de transporte de fluidos, ¿cómo se llama el tabique interno provisto de aberturas que permite el paso del líquido para disminuir su energía cinética (olas) en movimiento?",
+    "options": {
+      "A": "Mamparo",
+      "B": "Válvula de fondo",
+      "C": "Rompeolas",
+      "D": "Anillo de refuerzo"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 112,
+    "question": "Durante el incendio de un tanque de petróleo crudo, la \"onda de calor\" desciende hacia el fondo. Cuando esta onda (200-300°C) entra en contacto con el agua estancada, provoca la expansión del vapor y una explosión violenta de fuego conocida como:",
+    "options": {
+      "A": "Slopover",
+      "B": "Boilover",
+      "C": "Frothover",
+      "D": "Jet-Fire"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 113,
+    "question": "¿Qué fenómeno ocurre específicamente en recipientes que contienen aceites minerales viscosos (como el asfalto caliente) cuando el agua situada bajo su superficie entra en ebullición y produce derrames?",
+    "options": {
+      "A": "Boilover",
+      "B": "Flashover",
+      "C": "Slopover",
+      "D": "Frothover"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 114,
+    "question": "En un cilindro de Acetileno expuesto al fuego, los tapones o válvulas de descompresión (metal fusible) están diseñados para aliviar la presión. ¿A qué temperatura aproximada funcionan (se derriten) estos fusibles?",
+    "options": {
+      "A": "54 °C",
+      "B": "100 °C",
+      "C": "150 °C",
+      "D": "250 °C"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 115,
+    "question": "Según la NFPA 11, ¿qué rango de relación de expansión corresponde a una \"Espuma de Alta Expansión\"?",
+    "options": {
+      "A": "1:1 a 1:20",
+      "B": "1:20 a 1:200",
+      "C": "1:200 a 1:1000",
+      "D": "Mayor de 1:1000"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 116,
+    "question": "Al aplicar espuma en charcos de combustible líquido incendiados al aire libre, ¿qué método consiste en descargar el chorro en el suelo cerca del extremo frontal para que la masa ruede sobre el combustible?",
+    "options": {
+      "A": "Método de lluvia",
+      "B": "Método de caída",
+      "C": "Método de inyección",
+      "D": "Método de rodaje"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 117,
+    "question": "Si se emplea espuma AR-AFFF (resistente al alcohol) de concentración dual, ¿cuál es el porcentaje de dosificación que comúnmente se aplica para solventes polares y para hidrocarburos respectivamente?",
+    "options": {
+      "A": "1% para solventes polares y 3% para hidrocarburos.",
+      "B": "6% para solventes polares y 3% para hidrocarburos.",
+      "C": "3% para solventes polares y 6% para hidrocarburos.",
+      "D": "6% para ambos tipos."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 118,
+    "question": "En la investigación de incendios, ¿cómo se denomina a la marca física que dejan las llamas y los gases calientes sobre una pared vertical, cuyo vértice inferior generalmente señala el punto más bajo o área de origen del fuego?",
+    "options": {
+      "A": "Línea de flotación térmica",
+      "B": "Sombra de radiación",
+      "C": "Patrón de fuego en \"V\"",
+      "D": "Cono de dilatación"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 119,
+    "question": "La norma OSHA 29CFR 1910 - 134 respalda el principio de equipos de búsqueda y rescate en incendios. ¿Cuál es este principio?",
+    "options": {
+      "A": "\"LUNAR\"",
+      "B": "\"1-IN / 3-OUT\"",
+      "C": "\"2-IN / 2-OUT\" (2 adentro, 2 afuera).",
+      "D": "\"START\""
+    },
+    "answer": "C"
+  },
+  {
+    "id": 120,
+    "question": "¿Qué medida y diámetro mínimo debe tener la \"Cuerda Guía\" utilizada como herramienta esencial en las operaciones de búsqueda y rescate?",
+    "options": {
+      "A": "15 metros y 10 mm",
+      "B": "20 metros y 8 mm",
+      "C": "30 metros (100 pies) y 1/2 pulgada (12 mm)",
+      "D": "50 metros y 5/8 pulgada"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 121,
+    "question": "Durante las operaciones de avance o repliegue con nula visibilidad, ¿qué método táctico emplea el bombero para orientarse a través de la manguera y dirigirse hacia el exterior del edificio?",
+    "options": {
+      "A": "Seguir la costura exterior de la manguera hacia el lado izquierdo.",
+      "B": "Guiarse por los acoples: el acople macho apunta hacia el fuego y el acople hembra hacia la salida / camión autobomba.",
+      "C": "Guiarse por los acoples: el acople hembra apunta siempre hacia la lanza o pitón.",
+      "D": "Esperar a que la línea se despresurice para sentir la dirección del flujo."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 122,
+    "question": "En el procedimiento LUNAR para dar aviso de MAYDAY, ¿qué significa la letra \"R\"?",
+    "options": {
+      "A": "Ruta de salida más cercana.",
+      "B": "Respiración (frecuencia).",
+      "C": "Recursos materiales o acciones necesarias para el rescate o ayuda.",
+      "D": "Reporte al comandante de incidentes."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 123,
+    "question": "¿Cuál de las siguientes maniobras de autorescate se clasifica como \"Rescate Pasivo\" tras emitir un MAYDAY?",
+    "options": {
+      "A": "Ubicar una línea de manguera y seguirla hasta la salida de forma autónoma.",
+      "B": "Romper una pared para salir a un cuarto contiguo.",
+      "C": "Buscar un lugar seguro, prender las linternas al techo, hacer ruido y practicar la respiración de emergencia Reilly.",
+      "D": "Subir por las escaleras hacia la azotea."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 124,
+    "question": "Dentro de las partes del cuarto de máquinas de un ascensor, ¿qué elemento frena el ascensor y mantiene bloqueadas las zapatas de forma manual si se carece de corriente eléctrica?",
+    "options": {
+      "A": "El cuadro de maniobras",
+      "B": "El limitador de velocidad",
+      "C": "El volante de inercia",
+      "D": "El freno en el eje motor."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 125,
+    "question": "En un rescate de ascensores sin movimiento de la cabina (corte eléctrico), si la distancia entre el nivel del pasillo y la cabina es menor de 30 cm, el manual instruye que el rescate debe realizarse:",
+    "options": {
+      "A": "Hacia el piso superior.",
+      "B": "Hacia el piso inferior.",
+      "C": "Por la escotilla del techo.",
+      "D": "Solamente cuando se reactive la corriente."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 126,
+    "question": "En el rescate con cuerdas, ¿qué condición se da cuando el Factor de Caída (FC) es igual a 2, representando el máximo peligro?",
+    "options": {
+      "A": "Cuando el sistema ya está tensado y no hay caída libre.",
+      "B": "Cuando la caída es igual a la longitud de la cuerda.",
+      "C": "Cuando la distancia de caída es el doble de la cuerda disponible.",
+      "D": "Cuando se usan cuerdas elásticas dinámicas."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 127,
+    "question": "¿Qué función principal cumplen los \"Vientos\" en las operaciones de rescate con cuerdas y camillas?",
+    "options": {
+      "A": "Reducir la fuerza mecánica para izar el peso.",
+      "B": "Servir como línea de vida del rescatista.",
+      "C": "Dirigir, estabilizar o controlar el movimiento horizontal de una carga suspendida.",
+      "D": "Anclar el sistema principal a la estructura."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 128,
+    "question": "En los Sistemas de Ventaja Mecánica, si utilizamos un sistema 4:1 (que reduce la carga a una cuarta parte del esfuerzo), ¿cuántas y qué tipo de poleas requiere la configuración estándar descrita en el manual?",
+    "options": {
+      "A": "Dos poleas dobles (o dos poleas móviles y dos fijas)",
+      "B": "Una polea móvil y una fija.",
+      "C": "Tres poleas móviles.",
+      "D": "Dos poleas fijas."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 129,
+    "question": "Una cuerda de rescate \"Estática o Semi Estática\" (kernmantle) es la preferida por los bomberos debido a que:",
+    "options": {
+      "A": "Tiene alta elasticidad (mayor al 6%) para absorber fuertes caídas.",
+      "B": "Su elongación es baja (menor al 4%), lo que permite ascensos y desplazamientos controlados.",
+      "C": "Está recubierta de teflón para evitar quemaduras.",
+      "D": "Se fabrica sin núcleo interior para hacerla más ligera."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 130,
+    "question": "¿Qué nudo es el estándar preferido para formar una gaza fija y segura en el extremo o seno de una cuerda estática de rescate, manteniendo alta resistencia y facilidad para desatar tras soportar carga?",
+    "options": {
+      "A": "Nudo Ocho por seno (Figura de Ocho)",
+      "B": "Nudo Llano o Rizo",
+      "C": "Vuelta de Braza",
+      "D": "Cote Doble con mordida"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 131,
+    "question": "¿Qué acción está PROHIBIDA en la Posición de Recuperación Controlada al rescatar a una víctima de Síndrome del Arnés?",
+    "options": {
+      "A": "Acostarlo de inmediato completamente en horizontal, por el riesgo de síndrome de reperfusión.",
+      "B": "Mantenerlo sentado o semi-recostado.",
+      "C": "Administrar oxigenoterapia.",
+      "D": "Monitorear sus signos vitales."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 132,
+    "question": "Según la anatomía del sistema respiratorio descrita en Atención Prehospitalaria I y II, ¿qué elementos conforman la vía aérea inferior?",
+    "options": {
+      "A": "Nariz, boca y faringe.",
+      "B": "Laringe y epiglotis.",
+      "C": "Tráquea, bronquios, bronquiolos, alvéolos pulmonares y pulmones.",
+      "D": "Aurículas y ventrículos."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 133,
+    "question": "¿Cuál es el segundo eslabón en la Cadena de Supervivencia Extrahospitalaria para un adulto?",
+    "options": {
+      "A": "Activación de la respuesta a emergencias.",
+      "B": "Desfibrilación rápida.",
+      "C": "Soporte vital avanzado.",
+      "D": "RCP de alta calidad temprana con énfasis en las compresiones torácicas."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 134,
+    "question": "¿Qué concepto de la atención de emergencias describe el estado de un paciente cuya respiración se detiene y el corazón deja de latir, pero cuyas células cerebrales aún no han muerto?",
+    "options": {
+      "A": "Muerte Biológica (irreversible).",
+      "B": "Muerte Clínica (puede revertirse).",
+      "C": "Paro Respiratorio Aislado.",
+      "D": "Estado Vegetativo."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 135,
+    "question": "Para administrar una RCP de alta calidad en un adulto, las compresiones torácicas deben hundir el tórax a una profundidad de:",
+    "options": {
+      "A": "Al menos 5 a 6 centímetros.",
+      "B": "2 a 3 centímetros.",
+      "C": "8 a 10 centímetros.",
+      "D": "Exactamente 4 centímetros."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 136,
+    "question": "Según la Lección 05, ¿cuál es la norma NFPA tomada como referencia por el CGBVP para regular las calificaciones de los teleoperadores de seguridad pública en la Central de Emergencias (CEEM)?",
+    "options": {
+      "A": "NFPA 1001",
+      "B": "NFPA 1021",
+      "C": "NFPA 1061",
+      "D": "NFPA 1500"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 137,
+    "question": "¿En cuánto tiempo debe ser capaz de incorporarse al sistema la fuente alterna e independiente de energía eléctrica de emergencia de la CEEM?",
+    "options": {
+      "A": "En menos de 10 segundos",
+      "B": "En 30 segundos",
+      "C": "En 60 segundos",
+      "D": "En 3 minutos"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 138,
+    "question": "En la Lección 05 se señala que las ondas de radio VHF empleadas por el CGBVP se propagan en línea de visión a una velocidad aproximada de:",
+    "options": {
+      "A": "340 m/s",
+      "B": "150,000 km/s",
+      "C": "300,000 km/s",
+      "D": "500,000 km/s"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 139,
+    "question": "En la Lección 06, ¿cómo se define el término \"Peligro\"?",
+    "options": {
+      "A": "Probabilidad de que se materialice un daño sobre las personas.",
+      "B": "Situación con características intrínsecas capaz de causar daño a la persona, equipos, procesos y medio ambiente.",
+      "C": "Suceso repentino e inesperado que produce lesiones o pérdidas materiales.",
+      "D": "Estado alcanzado tras la mitigación de los actos inseguros."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 140,
+    "question": "Al ingresar a un incendio estructural, ¿cuál es la pauta mínima de seguridad para el avance del personal?",
+    "options": {
+      "A": "Ingresar individualmente si el bombero cuenta con EPRA cargado a 4500 psi.",
+      "B": "No ingresar solo, no ingresar sin EPP completo, sin EPRA y contar con radio de comunicaciones.",
+      "C": "Avanzar siempre por los ascensores para ahorrar aire de la botella.",
+      "D": "Ingresar primero sin manguera presurizada para reconocer rápidamente el recinto."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 141,
+    "question": "Dentro del perfil psicológico del bombero analizado en la Lección 07, ¿cuáles son las tres características consideradas de mayor riesgo por inducir problemas personales o falta de autocontrol?",
+    "options": {
+      "A": "Orientado al detalle, tomador de decisiones rápidas y necesidad de control.",
+      "B": "Necesidad de gratificación inmediata, aburrirse fácilmente y fuerte necesidad de ser necesitados.",
+      "C": "Altamente motivado por factores internos, orientado a la acción y perfeccionismo.",
+      "D": "Gusto por el trabajo en equipo, empatía y respeto al mando."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 142,
+    "question": "En el Modelo Continuo de Estrés (Lazarus y Folkman), ¿qué color identifica la condición en la que se presentan estados de angustia, deterioro de la salud mental y cicatrices emocionales?",
+    "options": {
+      "A": "Verde",
+      "B": "Amarillo",
+      "C": "Naranja",
+      "D": "Rojo"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 143,
+    "question": "¿A partir de cuántos días de persistencia de síntomas intrusivos (flashbacks, pesadillas, aislamiento) se considera que un bombero puede estar ingresando en un Trastorno de Estrés Postraumático (TEPT)?",
+    "options": {
+      "A": "48 horas",
+      "B": "7 días",
+      "C": "15 días",
+      "D": "Más de 30 días"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 144,
+    "question": "Según la Lección 08, en el Sistema de Comando de Incidentes (SCI), ¿cuál es el alcance de control óptimo por supervisor?",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "7",
+      "D": "10"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 145,
+    "question": "En el Sistema de Contabilidad de Personal (SCP), ¿qué color de Tarjeta de Administración y Control (TAC) corresponde a los grados de Seccionario, Subteniente y Teniente?",
+    "options": {
+      "A": "Celeste",
+      "B": "Amarillo",
+      "C": "Anaranjado",
+      "D": "Verde limón"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 146,
+    "question": "¿Qué color de TAC corresponde a los Oficiales Superiores y Oficiales Generales (desde Capitán hasta Brigadier General)?",
+    "options": {
+      "A": "Rojo escarlata",
+      "B": "Amarillo",
+      "C": "Anaranjado",
+      "D": "Dorado"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 147,
+    "question": "Cuando el Comandante del Incidente o el Oficial de Seguridad ordenan la evacuación total de una estructura, ¿cómo se ejecuta la señal sonora de alarma vehicular?",
+    "options": {
+      "A": "Sirena continua por 2 minutos sin pausas.",
+      "B": "Toque de sirenas y HORN electrónico 3 veces de manera rítmica y continua.",
+      "C": "Cinco toques cortos de silbato del bombero en puerta.",
+      "D": "Un toque largo de claxon cada 30 segundos. Módulo II: Lecciones 11 a 14"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 148,
+    "question": "De acuerdo con la Lección 11, ¿qué método de extinción consiste en romper o neutralizar los radicales libres en la zona de interfaz de llama?",
+    "options": {
+      "A": "Enfriamiento",
+      "B": "Sofocación",
+      "C": "Separación",
+      "D": "Inhibición de la reacción química en cadena"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 149,
+    "question": "¿Cuál es el símbolo y color normalizado para identificar a los fuegos de Clase D (metales combustibles)?",
+    "options": {
+      "A": "Triángulo verde",
+      "B": "Cuadrado rojo",
+      "C": "Círculo azul",
+      "D": "Estrella de cinco puntas amarilla"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 150,
+    "question": "¿A qué temperatura aproximada pueden llegar a arder metales combustibles como el magnesio, titanio o sodio en un fuego Clase D?",
+    "options": {
+      "A": "Entre 500 °C y 800 °C",
+      "B": "Entre 1,000 °C y 1,500 °C",
+      "C": "Entre 2,700 °C y 3,300 °C",
+      "D": "Más de 5,000 °C"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 151,
+    "question": "En la fase de desarrollo generalizado de un incendio interior, ¿cómo se denomina la frontera divisoria entre la capa superior de gases calientes (presión positiva) y la capa inferior de aire fresco (presión negativa)?",
+    "options": {
+      "A": "Colchón térmico",
+      "B": "Plano neutral",
+      "C": "Interfaz convectiva",
+      "D": "Línea de flotación térmica"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 152,
+    "question": "¿Qué fenómeno físico en interiores consiste en la inflamación de la capa de gases acumulada bajo el techo corriendo en forma de lenguas de fuego, siendo el paso previo al flashover?",
+    "options": {
+      "A": "Rollover o Flameover",
+      "B": "Backdraft",
+      "C": "Boilover",
+      "D": "Slopover"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 153,
+    "question": "¿Cuáles son los puntos fijos de congelación y ebullición del agua en la escala Fahrenheit (°F) según la Lección 11?",
+    "options": {
+      "A": "0 °F y 100 °F",
+      "B": "32 °F y 212 °F",
+      "C": "-40 °F y 180 °F",
+      "D": "10 °F y 150 °F"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 154,
+    "question": "De acuerdo con la Lección 12 y la normativa técnica peruana (NTP), ¿cuál de los siguientes extintores está terminantemente prohibido y debe inutilizarse?",
+    "options": {
+      "A": "Extintor de PQS presurizado.",
+      "B": "Extintor de acetato de potasio.",
+      "C": "Extintor de soda ácida o de tetracloruro de carbono.",
+      "D": "Extintor rodante de CO2."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 155,
+    "question": "¿Cuál es la antigüedad máxima de fabricación a partir de la cual un extintor portátil ya no es considerado apto para el servicio y debe ser descartado?",
+    "options": {
+      "A": "5 años",
+      "B": "10 años",
+      "C": "15 años",
+      "D": "Más de 20 años"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 156,
+    "question": "En un extintor de agua presurizada estándar de 2.5 galones (9.46 litros), ¿cuál es el tiempo aproximado de descarga continua?",
+    "options": {
+      "A": "15 segundos",
+      "B": "30 segundos",
+      "C": "55 segundos",
+      "D": "120 segundos"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 157,
+    "question": "Según la clasificación de desempeño de extintores para fuegos Clase B, ¿qué porcentaje del área que logra apagar un operador experto se asume que podrá extinguir un operador novato?",
+    "options": {
+      "A": "El 20%",
+      "B": "El 40%",
+      "C": "El 60%",
+      "D": "El 80%"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 158,
+    "question": "Conforme a la NTP 350.043-1, ¿a qué altura máxima debe instalarse el soporte de un extintor cuyo peso bruto total no supere los 18 kg?",
+    "options": {
+      "A": "1.10 m",
+      "B": "1.20 m",
+      "C": "1.50 m",
+      "D": "1.80 m"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 159,
+    "question": "¿A qué altura mínima sobre el suelo debe ubicarse la base de un extintor portátil cuando se instala en un soporte o base fija?",
+    "options": {
+      "A": "Al ras del piso",
+      "B": "Como mínimo a 20 cm",
+      "C": "A 50 cm",
+      "D": "A 80 cm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 160,
+    "question": "Según la Lección 13, ¿en qué rango debe mantenerse la presión de entrada de agua hacia la bomba del camión autobomba al abastecerse de un hidrante?",
+    "options": {
+      "A": "Entre 5 y 10 psi",
+      "B": "Entre 20 y 80 psi",
+      "C": "Entre 100 y 150 psi",
+      "D": "Superior a 200 psi"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 161,
+    "question": "De acuerdo con la Norma A.130 del Reglamento Nacional de Edificaciones (RNE), ¿cuál es la distancia máxima permitida entre hidrantes en la vía pública?",
+    "options": {
+      "A": "50 metros",
+      "B": "100 metros",
+      "C": "150 metros",
+      "D": "200 metros"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 162,
+    "question": "¿Cuál es la altura teórica máxima de aspiración de agua a nivel del mar (1 atm / 1.013 bar) y cuál es la altura máxima alcanzable en la práctica por las pérdidas mecánicas y de fricción?",
+    "options": {
+      "A": "Teórica 10.33 m; práctica no mayor de 7.5 m.",
+      "B": "Teórica 15.00 m; práctica 10.0 m.",
+      "C": "Teórica 8.50 m; práctica 4.5 m.",
+      "D": "Teórica 12.00 m; práctica 6.0 m."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 163,
+    "question": "¿Qué fenómeno destructivo ocurre en el impulsor de una bomba contra incendios cuando se intenta descargar un caudal mayor al que ingresa, haciendo que el agua hierva a temperatura ambiente formando burbujas de vapor que colapsan erosionando el metal?",
+    "options": {
+      "A": "Golpe de ariete",
+      "B": "Efecto Venturi",
+      "C": "Cavitación",
+      "D": "Descebado estático"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 164,
+    "question": "En los principios básicos de hidráulica contra incendios, ¿qué ocurre con la pérdida de presión por fricción dentro de una manguera si se duplica el caudal (galones por minuto) manteniendo el mismo diámetro y longitud?",
+    "options": {
+      "A": "La pérdida por fricción se mantiene constante.",
+      "B": "La pérdida por fricción se duplica (se incrementa 2 veces).",
+      "C": "La pérdida por fricción se cuadruplica (se incrementa 4 veces).",
+      "D": "La pérdida por fricción se reduce a la mitad."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 165,
+    "question": "¿Cuál es el valor de la constante de fricción \"C\" para una manguera de 2 ½ pulgadas de diámetro?",
+    "options": {
+      "A": "24",
+      "B": "15.5",
+      "C": "2",
+      "D": "0.8"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 166,
+    "question": "Para el cálculo rápido en operaciones contra incendios, ¿cuánta pérdida de presión en contra del flujo se considera por cada metro de elevación vertical y por cada piso de un edificio respectivamente?",
+    "options": {
+      "A": "1.5 psi por metro y 5 psi por piso.",
+      "B": "3 psi por metro y 10 psi por piso.",
+      "C": "0.5 psi por metro y 2 psi por piso.",
+      "D": "5 psi por metro y 15 psi por piso."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 167,
+    "question": "En un pitón neblinero operando a 100 psi, ¿a cuánto equivale aproximadamente la fuerza de reacción hacia atrás en kilogramos según la Lección 14?",
+    "options": {
+      "A": "Al 10% de los gpm descargados.",
+      "B": "Al 24% de los gpm descargados.",
+      "C": "Al 50% de los gpm descargados.",
+      "D": "Al 100% de la presión de bomba. Módulo II: Lecciones 15 a 17"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 168,
+    "question": "A 100 °C, ¿cuántas veces aproximadamente se expande 1 metro cúbico de agua al convertirse completamente en vapor?",
+    "options": {
+      "A": "500 veces",
+      "B": "1,000 veces",
+      "C": "1,700 veces",
+      "D": "3,500 veces"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 169,
+    "question": "Según la clasificación de caudales de la Lección 15, ¿cómo se define un \"chorro de línea de mano\"?",
+    "options": {
+      "A": "Chorro que descarga menos de 40 gpm.",
+      "B": "Chorro alimentado por mangueras de 1.5\" a 3\" que descarga entre 40 y 350 gpm.",
+      "C": "Chorro alimentado con monitor maestro que descarga más de 500 gpm.",
+      "D": "Chorro exclusivo para sistemas fijos de espuma."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 170,
+    "question": "En las técnicas de enfriamiento de la capa de gases (ataque 3D / 3DWF), ¿a qué ángulo aproximado con respecto a la horizontal del piso se dirige el cono del pitón neblinero hacia la esquina superior?",
+    "options": {
+      "A": "A 10°",
+      "B": "A 45°",
+      "C": "A 90°",
+      "D": "Al ras del piso"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 171,
+    "question": "En la Lección 16, ¿qué movimiento del pitón se recomienda durante un ataque indirecto en recintos con un fuerte gradiente térmico o durante las primeras pulsaciones?",
+    "options": {
+      "A": "Movimiento en \"Z\"",
+      "B": "Movimiento en \"T\"",
+      "C": "Movimiento en \"8\"",
+      "D": "Movimiento oscilatorio vertical continuo"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 172,
+    "question": "¿En qué consiste la técnica de extinción conocida como \"ablandado\" o \"resetear el incendio\" (ataque exterior ofensivo)?",
+    "options": {
+      "A": "Inundar la habitación con espuma de alta expansión desde el techo.",
+      "B": "Aplicar un chorro sólido hacia un punto fijo del techo desde el exterior (5 a 30 segundos) para que deflacte en gotas pequeñas enfriando el recinto sin bloquear la salida de gases.",
+      "C": "Utilizar ventiladores de presión positiva antes de desplegar líneas de agua.",
+      "D": "Cerrar todas las puertas y ventanas y dejar que el fuego se consuma solo."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 173,
+    "question": "Según la Lección 17, ¿cuál es el peso estándar de la cabeza de un hacha de bombero o de leñador para entrada forzada?",
+    "options": {
+      "A": "De 1 a 1.5 kg",
+      "B": "De 3 a 3.6 kg",
+      "C": "De 5 a 6 kg",
+      "D": "Más de 8 kg"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 174,
+    "question": "Para forzar una cortina metálica arrollable en un local comercial, ¿cuál es el patrón de corte más rápido y eficiente con mototrozadora?",
+    "options": {
+      "A": "Corte en cruz (\"+\")",
+      "B": "Corte en forma de \"A\" (triangular)",
+      "C": "Corte circular central",
+      "D": "Corte vertical por el riel izquierdo"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 175,
+    "question": "Al realizar corte y penetración para ingresar a través de un muro estructural, ¿qué forma geométrica debe tener la abertura inicial?",
+    "options": {
+      "A": "Rectangular horizontal",
+      "B": "En forma de diamante o triángulo",
+      "C": "Circular perfecta",
+      "D": "Cuadrada a nivel del zócalo"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 176,
+    "question": "¿Cuál es la regla de seguridad primordial respecto al transporte de herramientas mecanizadas o con motor de combustión?",
+    "options": {
+      "A": "Transportarlas siempre con el motor encendido para ganar tiempo.",
+      "B": "No transportar nunca una herramienta con la fuente de poder en funcionamiento; encenderla solo en el punto exacto de trabajo.",
+      "C": "Llevarlas colgadas del cuello con correas de sujeción.",
+      "D": "Operarlas mientras se sube por la escala."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 177,
+    "question": "Durante las operaciones de salvamento para mitigar pérdidas materiales por agua y escombros, ¿cuál es el procedimiento estándar para proteger el mobiliario del inmueble?",
+    "options": {
+      "A": "Agrupar los muebles en el centro de la habitación, elevarlos sobre el nivel del suelo y cubrirlos completamente con mantas de salvamento impermeables.",
+      "B": "Lanzar los enseres por ventanas o balcones hacia zonas despejadas de la vía pública.",
+      "C": "Rociar los muebles con chorro de espuma de alta expansión para impermeabilizarlos.",
+      "D": "Dejar las ventanas abiertas y esperar a que el vapor evapore el agua acumulada."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 178,
+    "question": "¿Cuál es el objetivo principal de la \"Remoción de Escombros\" una vez que el incendio ha sido controlado?",
+    "options": {
+      "A": "Retirar muebles a la calle para limpiar el edificio.",
+      "B": "Inspeccionar a fondo el área para asegurar la extinción de fuegos remanentes y evitar la reignición.",
+      "C": "Facilitar la demolición de la estructura por maquinaria pesada.",
+      "D": "Hallar objetos de valor para entregarlos a la prensa."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 179,
+    "question": "En la evaluación de estructuras (Lección 21), ¿cómo se denomina el despostillamiento o desprendimiento violento de la superficie del concreto debido a la evaporación de la humedad interna ante el fuego?",
+    "options": {
+      "A": "Pandeo",
+      "B": "Fluencia",
+      "C": "Spalling",
+      "D": "Torsión"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 180,
+    "question": "En la clasificación de daños en concreto armado, ¿qué nivel corresponde a grietas notables, pérdida del recubrimiento y exposición de las barras de refuerzo longitudinal?",
+    "options": {
+      "A": "Ninguno / Muy leve",
+      "B": "Leve",
+      "C": "Moderado",
+      "D": "Fuerte"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 181,
+    "question": "En incendios en edificios de gran altura, ¿cómo se denomina el fenómeno físico causado por el diferencial de presión y temperatura entre el interior y el exterior que impulsa el humo a gran velocidad hacia arriba por cajas de escaleras y ductos?",
+    "options": {
+      "A": "Efecto Venturi",
+      "B": "Tiro inverso forzado",
+      "C": "Convección laminar retardada",
+      "D": "Efecto Chimenea (Stack Effect)"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 182,
+    "question": "En el Sistema de Comando de Incidentes (SCI), ¿cómo se denomina el lugar físico donde se concentran, registran y preparan los recursos tácticos disponibles antes de ser asignados a una tarea?",
+    "options": {
+      "A": "Puesto de Comando (PC)",
+      "B": "Área de Espera (E)",
+      "C": "Base (B)",
+      "D": "Campamento (C)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 183,
+    "question": "Según el protocolo de radiocomunicaciones institucional del CGBVP, ¿qué término debe utilizarse de forma estricta para solicitar prioridad absoluta de transmisión por riesgo inminente de la vida?",
+    "options": {
+      "A": "¡Atención Central!",
+      "B": "¡Código Rojo!",
+      "C": "¡EMERGENCIA / MAYDAY!",
+      "D": "¡Silencio en frecuencia!"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 184,
+    "question": "¿Cuál es una de las mayores dificultades tácticas en incendios de sótanos?",
+    "options": {
+      "A": "La excesiva ventilación natural cruzada.",
+      "B": "La rápida caída de la temperatura ambiental.",
+      "C": "La acumulación de calor extremo y humo denso con rutas de escape limitadas, haciendo que los accesos actúen como chimeneas.",
+      "D": "La facilidad de uso de los ascensores para descender."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 185,
+    "question": "¿Cuánto tiempo como máximo debe durar el toque intermitente de sirenas vehiculares o claxon de las unidades para ordenar la retirada inmediata de una estructura en colapso?",
+    "options": {
+      "A": "Toques breves de 5 segundos.",
+      "B": "Secuencia continua de 3 toques repetidos durante 30 a 50 segundos.",
+      "C": "5 minutos ininterrumpidos.",
+      "D": "10 toques cortos de silbato."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 186,
+    "question": "En un Equipo de Protección Respiratoria Autónoma (EPRA), ¿a qué presión reduce el aire comprimido la \"primera etapa\" antes de enviarlo por la manguera hacia la máscara (segunda etapa)?",
+    "options": {
+      "A": "De 4500 psi a aproximadamente 80-150 psi",
+      "B": "De 2216 psi a presión atmosférica directa",
+      "C": "De 300 bar a 50 bar",
+      "D": "No reduce la presión; pasa a presión directa del cilindro"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 187,
+    "question": "¿Cómo se denomina el mecanismo de transmisión de calor a través de ondas electromagnéticas que no requiere un medio material intermedio para propagarse?",
+    "options": {
+      "A": "Conducción",
+      "B": "Convección",
+      "C": "Radiación",
+      "D": "Difusión gaseosa"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 188,
+    "question": "Según el rombo NFPA 704, ¿qué riesgo específico representa el cuadrante de color azul ubicado a la izquierda?",
+    "options": {
+      "A": "Inflamabilidad",
+      "B": "Riesgo a la Salud",
+      "C": "Reactividad o Inestabilidad",
+      "D": "Peligro Especial"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 189,
+    "question": "Para evitar el fenómeno de \"golpe de ariete\", que puede reventar mangueras y dañar las bombas contraincendios, ¿cuál es la pauta operativa obligatoria para el pitonero?",
+    "options": {
+      "A": "Abrir y cerrar el pitón siempre de manera lenta y progresiva.",
+      "B": "Usar únicamente patrón de chorro directo.",
+      "C": "Mantener la presión de bomba por encima de los 200 psi.",
+      "D": "Operar siempre con mangueras de 1 ½ pulgadas."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 190,
+    "question": "¿Cuál es el mecanismo de extinción fundamental de los agentes a base de Acetato de Potasio utilizados en fuegos Clase K (grasas y aceites de cocina)?",
+    "options": {
+      "A": "Desplazamiento por nitrógeno gaseoso",
+      "B": "Saponificación (formación de una capa jabonosa que sella y enfría)",
+      "C": "Inhibición de radicales libres halógenos",
+      "D": "Sublimación seca"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 191,
+    "question": "¿Qué tipo de espuma sintética está diseñada específicamente para no ser destruida al entrar en contacto con solventes polares (alcoholes, acetona) formando una membrana polimérica protectora?",
+    "options": {
+      "A": "Espuma Clase A",
+      "B": "Espuma Proteica convencional",
+      "C": "AFFF estándar",
+      "D": "AR-AFFF (Resistente al alcohol)"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 192,
+    "question": "En la investigación de incendios (Lección 28), ¿cuál es la función de los primeros respondedores respecto a los indicios y objetos de la escena?",
+    "options": {
+      "A": "Recolectar las pruebas, embalarlas y remitirlas al fiscal.",
+      "B": "Mover los muebles para limpiar la habitación y tomar fotografías.",
+      "C": "Proteger y preservar la escena tan intacta e inalterada como sea posible, limitando la remoción y facilitando datos al investigador.",
+      "D": "Interrogar formalmente a los sospechosos y redactar la sentencia."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 193,
+    "question": "Si un bombero queda atrapado en un ambiente colapsado o bloqueado y no cuenta con salidas ordinarias, ¿cómo se denomina la maniobra de supervivencia que consiste en romper los paneles de yeso entre los montantes verticales de una pared para acceder a una habitación contigua?",
+    "options": {
+      "A": "Desplazamiento ciego",
+      "B": "Perforación en ángulo",
+      "C": "Brechado de pared (Wall Breach)",
+      "D": "Escape perimetral pasivo"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 194,
+    "question": "De acuerdo con el algoritmo actual de control de hemorragias en trauma prehospitalario, ¿cuál es el primer paso ante una hemorragia masiva exanguinante en una extremidad?",
+    "options": {
+      "A": "Elevar la extremidad y esperar 5 minutos.",
+      "B": "Aplicación inmediata de un torniquete comercial certificado colocado por encima de la herida.",
+      "C": "Lavar con abundante agua estéril.",
+      "D": "Colocar un apósito simple sin comprimir."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 195,
+    "question": "¿Cuáles son los tres parámetros clínicos evaluados por la Escala de Coma de Glasgow (ECG)?",
+    "options": {
+      "A": "Pulso, Presión y Respiración",
+      "B": "Apertura ocular, Respuesta verbal y Respuesta motora",
+      "C": "Diámetro pupilar, Reflejo corneal y Movilidad",
+      "D": "Alerta, Dolor e Inconsciencia"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 196,
+    "question": "¿Qué nudo básico es el más empleado en el servicio de bomberos para unir dos cuerdas de diferente diámetro o grosor?",
+    "options": {
+      "A": "Nudo Llano o Rizo",
+      "B": "Vuelta de Escota",
+      "C": "As de Guía",
+      "D": "Ballestrinque"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 197,
+    "question": "En rescate vertical con cuerdas (Lección 31), ¿cuál es el Factor de Caída (FC) máximo posible que representa el escenario de mayor riesgo y severidad sobre el sistema?",
+    "options": {
+      "A": "FC = 0",
+      "B": "FC = 0.5",
+      "C": "FC = 1",
+      "D": "FC = 2"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 198,
+    "question": "¿Qué resistencia mínima certificada debe soportar un anclaje estructural o artificial en maniobras de rescate con cuerdas?",
+    "options": {
+      "A": "5 kN",
+      "B": "10 kN",
+      "C": "15 kN",
+      "D": "30 kN"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 199,
+    "question": "En la evaluación inicial prehospitalaria (Lección 32), ¿qué procedimiento nemotécnico se utiliza para valorar la respiración del paciente?",
+    "options": {
+      "A": "AVDI (Alerta, Verbal, Dolor, Inconsciente)",
+      "B": "VOS (Ver, Oír, Sentir)",
+      "C": "SAMPLE",
+      "D": "START"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 200,
+    "question": "Durante la RCP de alta calidad en un adulto (Lección 33), ¿cuál es la relación recomendada de compresiones torácicas y ventilaciones de rescate para uno o dos reanimadores?",
+    "options": {
+      "A": "15 compresiones y 1 ventilación",
+      "B": "15 compresiones y 2 ventilaciones",
+      "C": "30 compresiones y 2 ventilaciones",
+      "D": "50 compresiones continuas sin ventilación"
+    },
+    "answer": "C"
+  }
+]
