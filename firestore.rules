@@ -1,0 +1,60 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner(uid) {
+      return request.auth != null && request.auth.uid == uid
+        && request.auth.token.email_verified == true;
+    }
+    function validAttempt() {
+      let d = request.resource.data;
+      return d.keys().hasAll(['date', 'score', 'correct', 'wrong', 'blank', 'seconds', 'createdAt'])
+        && d.keys().hasOnly(['date', 'score', 'correct', 'wrong', 'blank', 'seconds', 'createdAt', 'details'])
+        && d.date is int && d.date >= 0
+        && d.correct is int && d.correct >= 0 && d.correct <= 100
+        && d.wrong is int && d.wrong >= 0 && d.wrong <= 100
+        && d.blank is int && d.blank >= 0 && d.blank <= 100
+        && d.correct + d.wrong + d.blank == 100
+        && d.score is number && d.score == d.correct - d.wrong * 0.25
+        && d.seconds is int && d.seconds >= 0 && d.seconds <= 7200
+        && d.createdAt == request.time
+        && (!('details' in d) || validDetails(d.details));
+    }
+    function validDetails(d) {
+      return d is map
+        && d.keys().hasAll(['bankVersion', 'questionIds', 'answers', 'answerKey'])
+        && d.keys().hasOnly(['bankVersion', 'questionIds', 'answers', 'answerKey'])
+        && d.bankVersion is string && d.bankVersion.size() > 0 && d.bankVersion.size() <= 80
+        && d.questionIds is list && d.questionIds.size() == 100 && d.questionIds.toSet().size() == 100
+        && d.answers is map && d.answerKey is map
+        && d.answerKey.size() == 100 && d.answerKey.keys().hasAll(d.questionIds)
+        && d.answers.keys().hasOnly(d.questionIds)
+        && d.answers.values().hasOnly(['A', 'B', 'C', 'D'])
+        && d.answerKey.values().hasOnly(['A', 'B', 'C', 'D']);
+    }
+    function validPractice() {
+      let d = request.resource.data;
+      return d.keys().hasAll(['correct', 'date', 'updatedAt'])
+        && d.keys().hasOnly(['correct', 'date', 'updatedAt', 'selected', 'answer'])
+        && d.correct is bool && d.date is int && d.date >= 0
+        && d.updatedAt == request.time
+        && ((!('selected' in d) && !('answer' in d))
+          || (d.selected in ['A', 'B', 'C', 'D'] && d.answer in ['A', 'B', 'C', 'D']
+            && d.correct == (d.selected == d.answer)));
+    }
+    match /users/{uid}/attempts/{attemptId} {
+      allow read: if owner(uid);
+      allow create: if owner(uid) && attemptId.matches('^[A-Za-z0-9_-]{1,160}$') && validAttempt();
+      allow update, delete: if false;
+    }
+    match /users/{uid}/practice/{questionId} {
+      allow read: if owner(uid);
+      allow create: if owner(uid) && questionId.matches('^([1-9]|[1-9][0-9]|1[0-9]{2}|200)$') && validPractice();
+      allow update: if owner(uid) && questionId.matches('^([1-9]|[1-9][0-9]|1[0-9]{2}|200)$')
+        && validPractice() && request.resource.data.date >= resource.data.date;
+      allow delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
