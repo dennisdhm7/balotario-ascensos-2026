@@ -4,13 +4,19 @@ import { createFirestoreStore } from './firestore-store.mjs';
 const $ = id => document.getElementById(id);
 const message = text => { $('accountMessage').textContent = text; };
 const errors = {
+  'auth/popup-blocked': 'El navegador bloqueó la ventana de Google. Permite ventanas emergentes para este sitio y vuelve a intentarlo.',
+  'auth/popup-closed-by-user': 'Se cerró la ventana de Google. Puedes volver a intentarlo.',
+  'auth/cancelled-popup-request': 'Ya hay una solicitud de acceso con Google. Vuelve a intentarlo.',
+  'auth/operation-not-allowed': 'El acceso con este proveedor no está habilitado en Firebase Authentication.',
+  'auth/unauthorized-domain': 'Este dominio no está autorizado en Firebase Authentication. Para la prueba local, añade localhost a los dominios autorizados.',
+  'auth/account-exists-with-different-credential': 'Este correo tiene una cuenta con otro método de acceso. Contacta al administrador para habilitar el acceso con Google.',
   'auth/invalid-credential': 'Correo o contraseña incorrectos.',
   'auth/invalid-email': 'Introduce un correo válido.',
   'auth/email-already-in-use': 'No se pudo registrar este correo. Prueba iniciar sesión o recuperar tu contraseña.',
   'auth/weak-password': 'La contraseña no cumple la política del proyecto.',
   'auth/password-does-not-meet-requirements': 'La contraseña no cumple la política del proyecto.',
   'auth/too-many-requests': 'Demasiados intentos. Espera antes de volver a probar.',
-  'auth/network-request-failed': 'No hay conexión. Puedes continuar con el simulacro local.',
+  'auth/network-request-failed': 'No hay conexión. Revisa tu conexión e intenta iniciar sesión de nuevo.',
   'permission-denied': 'Acceso rechazado. Verifica tu correo y que hayas aplicado la versión actual de firestore.rules.',
   'unavailable': 'No se pudo conectar. El historial local se conserva; vuelve a sincronizar.',
   'local/invalid-history': 'Algunos resultados locales no tienen un formato válido y no se sincronizaron.'
@@ -35,14 +41,11 @@ async function initialize() {
   auth.languageCode = 'es';
   // Memoria en Firestore y sesión por pestaña: no dejar una caché remota en equipos compartidos.
   await authSDK.setPersistence(auth, authSDK.browserSessionPersistence);
+  const googleProvider = new authSDK.GoogleAuthProvider();
+  googleProvider.setCustomParameters({ prompt: 'select_account' });
   const api = {
-    register: async (email, password) => (await authSDK.createUserWithEmailAndPassword(auth, email, password)).user,
-    login: (email, password) => authSDK.signInWithEmailAndPassword(auth, email, password),
+    loginGoogle: () => authSDK.signInWithPopup(auth, googleProvider),
     logout: () => authSDK.signOut(auth),
-    verify: user => authSDK.sendEmailVerification(user),
-    reset: email => authSDK.sendPasswordResetEmail(auth, email),
-    reload: user => authSDK.reload(user),
-    refreshToken: user => authSDK.getIdToken(user, true),
     ...createFirestoreStore(dbSDK, db, window.QuizCore.comparePractice)
   };
   let busy = false;
@@ -52,11 +55,9 @@ async function initialize() {
       $('accountLoggedOut').hidden = !!user;
       $('accountLoggedIn').hidden = !user;
       $('accountIdentity').textContent = user ? `${user.email} · ${user.emailVerified ? 'Correo verificado' : 'Correo pendiente de verificación'}` : '';
-      $('verifyEmail').hidden = !user || user.emailVerified;
-      $('refreshVerification').hidden = !user || user.emailVerified;
       $('syncHistory').disabled = !user?.emailVerified;
       $('importHistory').disabled = !user?.emailVerified;
-      message(user ? (user.emailVerified ? 'Cuenta lista. Los simulacros finalizados se sincronizan automáticamente.' : 'Revisa el correo de verificación. Después pulsa «Ya verifiqué mi correo».') : 'Inicia sesión para resolver el balotario. Tus datos locales anteriores se conservan.');
+      message(user ? (user.emailVerified ? 'Cuenta lista. Los simulacros finalizados se sincronizan automáticamente.' : 'La sincronización requiere un correo verificado por Google.') : 'Inicia sesión para resolver el balotario. Tus datos locales anteriores se conservan.');
     },
     localHistory: () => window.QuizLocal.history(),
     localPractice: () => window.QuizLocal.practice(),
@@ -96,25 +97,8 @@ async function initialize() {
     catch (error) { report(error); }
     finally { busy = false; $('accountActions').disabled = false; }
   }
-  const email = () => $('authEmail').value.trim();
-  const password = () => $('authPassword').value;
-  $('authForm').onsubmit = event => {
-    event.preventDefault();
-    const pass = password(); $('authPassword').value = '';
-    void action(() => service.login(email(), pass));
-  };
-  $('registerAccount').onclick = () => {
-    if (!$('authForm').reportValidity()) return;
-    const pass = password(); $('authPassword').value = '';
-    void action(() => service.register(email(), pass), 'Cuenta creada. Revisa tu correo para verificarla. Si no llega, puedes reenviarlo.');
-  };
-  $('resetPassword').onclick = () => {
-    if (!$('authEmail').reportValidity()) return;
-    void action(() => service.reset(email()), 'Si existe una cuenta para ese correo, recibirás instrucciones para recuperar tu contraseña.');
-  };
+  $('googleLogin').onclick = () => void action(() => service.loginGoogle());
   $('logoutAccount').onclick = () => void action(() => service.logout());
-  $('verifyEmail').onclick = () => void action(() => service.verify(), 'Correo de verificación enviado.');
-  $('refreshVerification').onclick = () => void action(() => service.refresh());
   $('syncHistory').onclick = () => void service.sync();
   $('importHistory').onclick = () => {
     if (!confirm('¿Confirmas que el historial de invitado de este dispositivo te pertenece y deseas copiarlo a tu cuenta?')) return;

@@ -305,8 +305,36 @@ test('rechaza bloques inválidos y mantiene la recuperación del simulacro anter
   assert.equal(storage.get(key),JSON.stringify(guest));
   app.run("window.QuizLocal.switchUser('new-user'); start('practice'); choose(session[0].answer)");
   assert.equal(app.run('countAnswered()'),1);
+  assert.equal(app.elements.get('accountArea').hidden,true);
+  assert.equal(app.elements.get('practiceCaption').textContent,'1 de 200 preguntas respondidas.');
+  assert.equal(app.elements.get('practiceProgress').value,1);
+  app.run("show('home')");
+  assert.equal(app.elements.get('accountArea').hidden,false);
   app.run('window.QuizLocal.switchUser(null); finish(true)');
   assert.equal(app.elements.get('quiz').hidden,true);
   assert.equal(app.run('session.length'),0);
   assert.equal(storage.get(key),JSON.stringify(guest));
  });
+
+test('navegación de estudio respeta sesión, abre bloques e historial y conserva el examen al salir', async () => {
+  const app=await browser();
+  assert.equal(app.elements.get('studySidebar').hidden,false);
+  app.run("navigateStudy('blocks')");
+  assert.equal(app.elements.get('home').hidden,false);
+  app.run("navigateStudy('history')");
+  assert.equal(app.elements.get('deviceHistoryPanel').open,true);
+  app.run("navigateStudy('exam')");
+  const id=app.run('attemptId');
+  assert.equal(app.elements.get('studySidebar').hidden,true);
+  app.run("choose(session[0].answer); navigateStudy('home')");
+  assert.equal(app.run('getStore().activeExam.id'),id);
+  assert.equal(app.elements.get('studySidebar').hidden,false);
+  app.run("navigateStudy('practice')");
+  assert.equal(app.run('attemptId'),id);
+  assert.equal(app.run('mode'),'exam');
+  assert.equal(app.run('countAnswered()'),1);
+  app.run("window.QuizLocal.switchUser(null); navigateStudy('practice')");
+  assert.equal(app.elements.get('studySidebar').hidden,true);
+  assert.equal(app.elements.get('mobileStudyNav').hidden,true);
+  assert.equal(app.run('session.length'),0);
+});

@@ -104,6 +104,7 @@ export function createCloudService(api, view) {
       await api.verify(user);
     },
     login: (email, password) => api.login(email, password),
+    loginGoogle: () => api.loginGoogle(),
     logout: () => api.logout(),
     reset: email => api.reset(email),
     async verify() { if (current) await api.verify(current); },

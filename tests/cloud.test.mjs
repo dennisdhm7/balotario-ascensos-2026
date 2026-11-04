@@ -16,6 +16,7 @@ function setup() {
     async register(...args) { calls.push(['register', ...args]); return { uid: 'new' }; },
     async verify(user) { calls.push(['verify', user.uid]); },
     async login(...args) { calls.push(['login', ...args]); },
+    async loginGoogle() { calls.push(['loginGoogle']); return { user: { uid: 'google-user', emailVerified: true } }; },
     async logout() { calls.push(['logout']); },
     async reset(email) { calls.push(['reset', email]); },
     async reload(user) { user.emailVerified = true; },
@@ -174,4 +175,14 @@ test('historial de bloques acepta 20 preguntas y conserva su tipo sin afectar in
   assert.equal(attemptData({ ...item, details: undefined }), null);
   assert.equal(attemptData({ ...attempt, questionCount: 20 }), null);
   assert.ok(attemptData(attempt));
+});
+
+test('acceso con Google delega al proveedor y propaga cancelaciones sin cambiar la cuenta', async () => {
+  const x=setup();
+  const result=await x.service.loginGoogle();
+  assert.equal(result.user.uid,'google-user');
+  assert.deepEqual(x.calls,[['loginGoogle']]);
+  x.api.loginGoogle=async()=>{throw Object.assign(new Error('cancelled'),{code:'auth/popup-closed-by-user'})};
+  await assert.rejects(x.service.loginGoogle(),{code:'auth/popup-closed-by-user'});
+  assert.equal(x.calls.some(c=>c[0]==='identity'),false);
 });
