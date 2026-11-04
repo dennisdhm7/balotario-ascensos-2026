@@ -16,7 +16,7 @@ function runClock(){stopClock();if(!checkDeadline())timer=setInterval(checkDeadl
 function resumeExam(saved){if(!localUser)return false;const restored=Core.restore(saved,bank);if(!restored)return false;mode=restored.kind==='block'?'blockExam':'exam';session=restored.questions;answers=restored.answers;index=restored.index;deadline=restored.deadline;attemptId=restored.id;finished=false;setupQuiz();runClock();return true}
 function setupQuiz(){$('modeLabel').textContent=mode==='blockExam'?`Simulacro por bloques · ${blockLabel()}`:mode==='blockPractice'?`Práctica por bloques · ${blockLabel()}`:isExam()?'Simulacro de autoestudio · 100 preguntas':mode==='mistakes'?'Repaso de errores':'Práctica libre';$('finish').textContent=isExam()?'Finalizar examen':'Terminar práctica';$('finish').hidden=false;remaining=isExam()?Core.remaining(deadline,Date.now(),examSeconds()):RULES.seconds;updateClock();show('quiz');render()}
 function stats(){const s=getStore();$('done').textContent=Object.keys(s.practice||{}).length;$('attempts').textContent=(s.history||[]).length;$('last').textContent=s.history?.length?Number(s.history.at(-1).score).toFixed(2)+' / '+(s.history.at(-1).kind==='block'?20:100):'—';renderLocalHistory(s.history)}
-function show(id){['home','quiz','results','error'].forEach(x=>$(x).hidden=x!==id);window.scrollTo(0,0)}
+function show(id){['home','quiz','results','error'].forEach(x=>$(x).hidden=x!==id||(x==='home'&&!localUser));window.scrollTo(0,0)}
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
 function updateClock(){if(!isExam()){$('timer').textContent='Sin límite';return}const m=Math.floor(remaining/60),s=remaining%60;$('timer').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;$('timer').style.color=remaining<=300?'#bd302b':''}
 function stopClock(){if(timer!==null){clearInterval(timer);timer=null}}
@@ -45,7 +45,7 @@ window.QuizLocal={
   },
   reviewAttempt:renderAttemptReview,
   switchUser(uid){
-    if(uid===localUser)return;
+    if(uid===localUser){updateAccess();return;}
     persistSession();stopClock();localUser=uid;
     session=[];answers={};reviewData=[];index=0;finished=true;
     $('reviewList').replaceChildren();$('reviewList').hidden=true;$('feedback').textContent='';
@@ -108,4 +108,4 @@ function renderBlocks(){
   select.value='0';updateAccess();
 }
 
-function updateAccess(){const locked=!localUser||!bank.length;document.querySelectorAll('[data-mode]').forEach(b=>b.disabled=locked);$('blockSelect').disabled=locked;$('loginRequired').hidden=!!localUser}
+function updateAccess(){const locked=!localUser||!bank.length;document.querySelectorAll('[data-mode]').forEach(b=>b.disabled=locked);$('blockSelect').disabled=locked;$('loginRequired').hidden=!!localUser;$('loginWelcome').hidden=!!localUser;$('studyNav').hidden=!localUser;$('accountArea').className=localUser?'account-area':'login-layout';$('accountTitle').textContent=localUser?'Mi cuenta':'Inicia sesión';$('accountIntro').textContent=localUser?'Administra tu sesión y consulta tu historial sincronizado.':'Ingresa con tu cuenta o regístrate para empezar a practicar.';if(!localUser)$('home').hidden=true}
