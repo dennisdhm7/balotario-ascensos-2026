@@ -19,9 +19,9 @@ const report = error => message(errors[error.code] || 'No se pudo completar la o
 
 async function initialize() {
   const config = window.FIREBASE_CONFIG;
-  if (!config?.enabled) { message('Cuentas en línea sin configurar. Puedes usar todas las funciones locales.'); return; }
+  if (!config?.enabled) { message('El acceso requiere iniciar sesión. Falta configurar Firebase.'); return; }
   if (!['apiKey', 'authDomain', 'projectId', 'appId'].every(k => typeof config[k] === 'string' && config[k])) {
-    message('Falta completar la configuración de Firebase. El autoestudio local sigue disponible.'); return;
+    message('Falta completar la configuración de Firebase para poder iniciar sesión.'); return;
   }
   const version = '12.0.0';
   const [appSDK, authSDK, dbSDK] = await Promise.all([
@@ -56,7 +56,7 @@ async function initialize() {
       $('refreshVerification').hidden = !user || user.emailVerified;
       $('syncHistory').disabled = !user?.emailVerified;
       $('importHistory').disabled = !user?.emailVerified;
-      message(user ? (user.emailVerified ? 'Cuenta lista. Los simulacros finalizados se sincronizan automáticamente.' : 'Revisa el correo de verificación. Después pulsa «Ya verifiqué mi correo».') : 'Modo invitado. Tus datos locales anteriores se conservan.');
+      message(user ? (user.emailVerified ? 'Cuenta lista. Los simulacros finalizados se sincronizan automáticamente.' : 'Revisa el correo de verificación. Después pulsa «Ya verifiqué mi correo».') : 'Inicia sesión para resolver el balotario. Tus datos locales anteriores se conservan.');
     },
     localHistory: () => window.QuizLocal.history(),
     localPractice: () => window.QuizLocal.practice(),
@@ -126,4 +126,4 @@ async function initialize() {
   authSDK.onAuthStateChanged(auth, user => service.change(user), report);
   $('accountActions').disabled = false;
 }
-initialize().catch(() => message('No se pudo iniciar Firebase. El autoestudio local sigue disponible. Revisa la configuración y la conexión.'));
+initialize().catch(() => message('No se pudo iniciar Firebase. Para resolver el balotario necesitas iniciar sesión. Revisa la configuración y la conexión.'));

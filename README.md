@@ -10,7 +10,7 @@ La clave de respuestas procede del balotario proporcionado y no ha sido verifica
 
 ## Funcionamiento
 
-Herramienta de autoestudio no oficial. El modo invitado funciona sin configurar Firebase; las cuentas e historial en línea son opcionales.
+Herramienta de autoestudio no oficial. Es obligatorio iniciar sesión para resolver el balotario en cualquier modalidad. No se exige correo verificado para practicar o rendir simulacros; la verificación solo habilita la sincronización con Firestore. Sin Firebase disponible, el acceso permanece bloqueado.
 
 - Simulacro completo de 100 preguntas distintas, elegidas aleatoriamente, con 120 minutos de duración.
 - Diez bloques consecutivos de 20 preguntas: 1–20, 21–40, …, 181–200, siempre en orden. Cada bloque ofrece práctica con corrección inmediata o un simulacro de 24 minutos, corrección al finalizar y aprobación desde 14/20. Conserva +1 por correcta, −0.25 por incorrecta y 0 en blanco. Estas condiciones proporcionales son de autoestudio.
@@ -54,7 +54,7 @@ Fuentes oficiales: [SDK web mediante CDN](https://firebase.google.com/docs/web/a
 - Registro, inicio/cierre de sesión, reenvío de verificación y recuperación de contraseña están disponibles en el panel de cuenta. Solo un correo verificado puede consultar o guardar historial remoto.
 - La sesión de Authentication dura la sesión de la pestaña. Firestore utiliza caché en memoria; no se activa su persistencia en disco. Cierra sesión al terminar en un equipo compartido.
 - El progreso de invitado permanece en `cgbvp-ascensos-2026-v2`. Cada usuario usa una clave local separada por UID para práctica, borradores e historial pendiente. Al cambiar de cuenta se limpian los datos visibles y se detiene el temporizador anterior; su fecha límite permanece intacta.
-- Un simulacro empezado como invitado permanece como invitado. Iniciar sesión no transfiere ese borrador. Al cerrar sesión se recupera el borrador del invitado, si existe.
+- Los borradores antiguos de invitado no se pueden continuar. Iniciar sesión no transfiere ese borrador. Al cerrar sesión se bloquea el cuestionario y no se recuperan borradores de invitado. Los datos antiguos de invitado se conservan para importar su historial.
 - Los resultados de cuentas se escriben en `users/{uid}/attempts/{attemptId}`: fecha local de finalización en milisegundos, puntaje, correctas, incorrectas, en blanco, segundos utilizados, `createdAt` generado por el servidor y el detalle de los intentos nuevos (ver esquema debajo). No se guarda contraseña ni se duplica el correo en Firestore.
 - Los resultados son inmutables desde el cliente. Una transacción consulta el ID antes de crear para que un reintento no duplique el resultado. La sincronización de historial y progreso se intenta al iniciar sesión verificada, responder en práctica o repaso, finalizar un simulacro, recuperar conectividad o pulsar **Sincronizar historial**. En una sesión solo se vuelven a enviar las preguntas modificadas; un cambio de cuenta limpia ese registro. Si falla, los resultados locales siguen disponibles para reintentar.
 - El panel muestra en tiempo real hasta los 100 resultados remotos más recientes. El historial remoto ofrece **Revisar respuestas** para los intentos nuevos. Las tarjetas de cantidad y último resultado siguen contando los simulacros locales; el progreso por pregunta y **Repasar errores** sí incorporan los datos sincronizados de la cuenta. Los borradores no se sincronizan.
@@ -119,3 +119,5 @@ En la tarjeta **Bloques de 20 preguntas**, selecciona el rango que deseas estudi
 - Para sincronizar estos nuevos simulacros de 20 preguntas, vuelve a aplicar **la versión actual de `firestore.rules`** en Firebase Console. Las reglas anteriores solo admiten resúmenes de 100 preguntas. Las reglas de práctica por pregunta no cambian.
 
 Las pruebas automáticas comprueban los diez rangos, práctica, puntuación sobre 20, aprobación, recuperación, vencimiento a los 24 minutos, compatibilidad con 100 preguntas y validación/aislamiento en Firestore.
+
+El requisito de inicio de sesión controla el acceso desde la interfaz estática; el archivo público `questions.json` sigue siendo accesible directamente. Al cerrar sesión se conserva el borrador de la cuenta con su fecha límite original.

@@ -44,7 +44,7 @@ test('repaso conserva errores omitidos y retira los corregidos sin perder datos 
 });
 
 // Ejecuta app.js con DOM y reloj controlados, usando el banco real.
-async function browser(storage = new Map(), initialTime = 1000000) {
+async function browser(storage = new Map(), initialTime = 1000000, uid = 'test-user') {
   let now = initialTime;
   const elements = new Map();
   function element() { return { hidden: false, disabled: false, style: {}, children: [], textContent: '', append(...xs) { this.children.push(...xs); }, replaceChildren() { this.children = []; }, scrollIntoView() {} }; }
@@ -58,11 +58,12 @@ async function browser(storage = new Map(), initialTime = 1000000) {
     fetch: async () => ({ ok: true, json: async () => bank }) });
   vm.runInContext(fs.readFileSync(require.resolve('../app.js'), 'utf8'), context);
   await new Promise(resolve => setImmediate(resolve));
+  if(uid)vm.runInContext(`window.QuizLocal.switchUser(${JSON.stringify(uid)})`, context);
   return { run: code => vm.runInContext(code, context), elements, storage, advance: ms => { now += ms; } };
 }
 
 test('flujo completo: borrar respuesta, recargar, expirar y conservar historial local', async () => {
-  const key = 'cgbvp-ascensos-2026-v2';
+  const key = 'cgbvp-ascensos-2026-v2-user-test-user';
   const old = { history: [{ date: 1, score: 80, correct: 80, wrong: 0, blank: 20, seconds: 20 }], practice: { 200: { correct: false, date: 1 } } };
   const storage = new Map([[key, JSON.stringify(old)]]);
   const first = await browser(storage);
@@ -138,7 +139,7 @@ test('fallo de almacenamiento visible y datos locales malformados recuperables',
 test('cuentas aíslan historial, respuestas y recuperación; invitado conserva sus datos', async () => {
   const app = await browser();
   app.run("start('exam'); choose(session[0].answer)");
-  const guestId = app.run('attemptId');
+  const savedId = app.run('attemptId');
   app.run("window.QuizLocal.switchUser('A')");
   assert.equal(app.run('window.QuizLocal.history().length'), 0);
   assert.equal(app.run('session.length'), 0);
@@ -150,7 +151,12 @@ test('cuentas aíslan historial, respuestas y recuperación; invitado conserva s
   app.run("window.QuizLocal.switchUser('A')");
   assert.equal(app.run('window.QuizLocal.history().length'), 1);
   app.run('window.QuizLocal.switchUser(null)');
-  assert.equal(app.run('attemptId'), guestId);
+  assert.equal(app.run('countAnswered()'), 0);
+  assert.equal(app.elements.get('quiz').hidden, true);
+  app.run("start('practice')");
+  assert.equal(app.run('session.length'), 0);
+  app.run("window.QuizLocal.switchUser('test-user')");
+  assert.equal(app.run('attemptId'), savedId);
   assert.equal(app.run('countAnswered()'), 1);
 });
 
@@ -284,3 +290,23 @@ test('rechaza bloques inválidos y mantiene la recuperación del simulacro anter
   assert.equal(app.run('session.length'), 100);
   assert.equal(Core.restore({ id: 'bad', deadline: 1000, kind: 'block', questionIds: bank.slice(1, 21).map(q => q.id) }, bank), null);
 });
+
+ test('sin sesión no inicia ningún modo ni recupera un borrador de invitado', async () => {
+  const key = 'cgbvp-ascensos-2026-v2';
+  const guest = {history:[],practice:{},activeExam:{id:'guest',deadline:9000000,questionIds:bank.slice(0,100).map(q=>q.id),answers:{},index:0}};
+  const storage = new Map([[key,JSON.stringify(guest)]]);
+  const app = await browser(storage,1000000,null);
+  for(const mode of ['practice','exam','mistakes','blockPractice','blockExam']) {
+    app.run(`start('${mode}')`);
+    assert.equal(app.run('session.length'),0);
+  }
+  assert.equal(app.elements.get('blockSelect').disabled,true);
+  assert.equal(app.elements.get('loginRequired').hidden,false);
+  assert.equal(storage.get(key),JSON.stringify(guest));
+  app.run("window.QuizLocal.switchUser('new-user'); start('practice'); choose(session[0].answer)");
+  assert.equal(app.run('countAnswered()'),1);
+  app.run('window.QuizLocal.switchUser(null); finish(true)');
+  assert.equal(app.elements.get('quiz').hidden,true);
+  assert.equal(app.run('session.length'),0);
+  assert.equal(storage.get(key),JSON.stringify(guest));
+ });
