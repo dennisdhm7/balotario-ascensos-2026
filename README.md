@@ -4,6 +4,8 @@ Aplicación web de práctica y simulacros basada en el PDF de 200 preguntas apor
 
 ## Publicación
 
+Para el VPS con Nginx y despliegue automático desde GitHub Actions, consulta [la configuración paso a paso](docs/despliegue-vps.md). El workflow publica tras cada push a `main`, únicamente si las pruebas pasan. Requiere configurar primero el usuario SSH y los secretos del repositorio.
+
 Los archivos necesarios para GitHub Pages son `index.html`, `style.css`, `quiz-core.js`, `app.js`, `questions.json`, `firebase-config.js`, `firebase-account.mjs`, `cloud-service.mjs` y `firestore-store.mjs`. Se sirven como archivos estáticos, sin compilación ni dependencias de producción.
 
 La clave de respuestas procede del balotario proporcionado y no ha sido verificada independientemente. El progreso se conserva localmente y, con una cuenta verificada, también se sincroniza con Firestore.

@@ -1,0 +1,57 @@
+name: Publicar balotario en VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: balotario-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Comprobar aplicación
+        run: |
+          npm test
+          node --check app.js
+          node --check firebase-account.mjs
+      - name: Preparar conexión SSH
+        env:
+          DEPLOY_KEY: ${{ secrets.VPS_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          test -n "$DEPLOY_KEY" && test -n "$KNOWN_HOSTS"
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/deploy_key ~/.ssh/known_hosts
+      - name: Publicar archivos estáticos
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_PORT: ${{ secrets.VPS_PORT }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+        run: |
+          test -n "$VPS_HOST" && test -n "$VPS_USER"
+          port="${VPS_PORT:-22}"
+          [[ "$port" =~ ^[0-9]+$ ]]
+          rsync -rlz --delay-updates --chmod=D755,F644 \
+            -e "ssh -i $HOME/.ssh/deploy_key -p $port -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=20" \
+            index.html style.css app.js quiz-core.js questions.json \
+            firebase-config.js firebase-account.mjs cloud-service.mjs firestore-store.mjs \
+            "$VPS_USER@$VPS_HOST:/var/www/balotario2026/"
+      - name: Comprobar sitio publicado
+        run: curl --fail --silent --show-error --retry 3 https://balotario2026.ddns.net/ > /dev/null
+      - name: Retirar clave del runner
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
