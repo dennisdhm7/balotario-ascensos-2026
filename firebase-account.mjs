@@ -42,6 +42,99 @@ async function initialize() {
   // Memoria en Firestore y sesión por pestaña: no dejar una caché remota en equipos compartidos.
   await authSDK.setPersistence(auth, authSDK.browserSessionPersistence);
   const googleProvider = new authSDK.GoogleAuthProvider();
+  const adminPanel = document.createElement('section');
+  adminPanel.hidden = true;
+  adminPanel.className = 'admin-panel';
+  $('accountLoggedIn').append(adminPanel);
+  let adminGeneration = 0;
+  let functionsPromise;
+  async function adminCall(name, data = {}) {
+    functionsPromise ||= import(`https://www.gstatic.com/firebasejs/${version}/firebase-functions.js`);
+    const sdk = await functionsPromise;
+    return (await sdk.httpsCallable(sdk.getFunctions(app, 'us-central1'), name)(data)).data;
+  }
+  function renderAdmin(user) {
+    const generation = ++adminGeneration;
+    adminPanel.replaceChildren();
+    adminPanel.hidden = !(user?.emailVerified && user.email?.toLowerCase() === 'dark815@gmail.com');
+    if (adminPanel.hidden) return;
+    const heading = document.createElement('h3'); heading.textContent = 'Administración';
+    const toggle = document.createElement('button'); toggle.type = 'button'; toggle.className = 'outline';
+    toggle.textContent = 'Administrar usuarios'; toggle.setAttribute('aria-expanded', 'false');
+    const content = document.createElement('div'); content.hidden = true;
+    const status = document.createElement('p'); status.setAttribute('role', 'status');
+    const list = document.createElement('div'), grades = document.createElement('div');
+    const more = document.createElement('button'); more.type = 'button'; more.textContent = 'Cargar más usuarios'; more.hidden = true;
+    let pageToken, loading = false, gradeGeneration = 0;
+    const errorMessage = error => error.code === 'functions/permission-denied' ? 'Acceso de administrador rechazado.' :
+      'No se pudo completar la operación. Comprueba la conexión y que las funciones de administración estén desplegadas. Si estabas eliminando una cuenta, puede haber quedado deshabilitada; vuelve a intentar eliminarla.';
+    async function load(reset = false) {
+      if (loading) return;
+      loading = true; more.disabled = true; status.textContent = 'Cargando usuarios…';
+      try {
+        const result = await adminCall('adminListUsers', reset || !pageToken ? {} : { pageToken });
+        if (generation !== adminGeneration) return;
+        if (reset) list.replaceChildren();
+        for (const row of result.users) {
+          const card = document.createElement('article'); card.className = 'admin-user';
+          const title = document.createElement('h4'); title.textContent = row.email || row.uid;
+          const info = document.createElement('p'); info.textContent = `${row.name || 'Sin nombre'} · Registro: ${new Date(row.createdAt).toLocaleString('es-PE')}${row.disabled ? ' · Cuenta deshabilitada' : ''}`;
+          const notes = document.createElement('button'); notes.type = 'button'; notes.className = 'outline'; notes.textContent = 'Ver notas';
+          notes.onclick = async () => {
+            const gradeToken = ++gradeGeneration;
+            grades.replaceChildren();
+            const label = document.createElement('h4'); label.textContent = `Notas de ${row.email || row.uid}`;
+            const results = document.createElement('ol'), state = document.createElement('p');
+            const next = document.createElement('button'); next.type = 'button'; next.textContent = 'Cargar más notas';
+            grades.append(label, state, results, next);
+            let before;
+            async function loadGrades() {
+              next.disabled = true; state.textContent = 'Cargando notas…';
+              try {
+                const data = await adminCall('adminUserGrades', { uid: row.uid, ...(before ? { before } : {}) });
+                if (generation !== adminGeneration || gradeToken !== gradeGeneration) return;
+                for (const attempt of data.attempts) {
+                  const item = document.createElement('li');
+                  item.textContent = `${new Date(attempt.date).toLocaleString('es-PE')} · ${attempt.score} / ${attempt.count} puntos · ${attempt.correct} correctas, ${attempt.wrong} incorrectas, ${attempt.blank} en blanco`;
+                  results.append(item);
+                }
+                before = data.before; next.hidden = !before;
+                state.textContent = results.children.length ? 'Resultados sincronizados; ordenados por identificador de intento.' : 'Este usuario no tiene simulacros sincronizados.';
+              } catch (error) { if (generation === adminGeneration && gradeToken === gradeGeneration) state.textContent = errorMessage(error); }
+              finally { next.disabled = false; }
+            }
+            next.onclick = () => void loadGrades();
+            await loadGrades();
+          };
+          card.append(title, info, notes);
+          if (row.uid !== user.uid && row.email?.toLowerCase() !== 'dark815@gmail.com') {
+            const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'outline'; remove.textContent = 'Eliminar cuenta';
+            remove.onclick = async () => {
+              if (!confirm(`¿Eliminar la cuenta ${row.email || row.uid} y todos sus resultados y progreso en línea? Esta acción no se puede deshacer. Sus datos locales no se borran y podrá registrarse de nuevo con Google.`)) return;
+              remove.disabled = true; status.textContent = 'Eliminando cuenta…';
+              try {
+                await adminCall('adminDeleteUser', { uid: row.uid });
+                if (generation !== adminGeneration) return;
+                card.remove(); ++gradeGeneration; grades.replaceChildren(); status.textContent = 'Cuenta y progreso en línea eliminados.';
+              } catch (error) { if (generation === adminGeneration) status.textContent = errorMessage(error); }
+              finally { remove.disabled = false; }
+            };
+            card.append(remove);
+          }
+          list.append(card);
+        }
+        pageToken = result.pageToken; more.hidden = !pageToken;
+        status.textContent = `${list.children.length} usuarios cargados.`;
+      } catch (error) { if (generation === adminGeneration) status.textContent = errorMessage(error); }
+      finally { loading = false; more.disabled = false; }
+    }
+    toggle.onclick = () => {
+      content.hidden = !content.hidden; toggle.setAttribute('aria-expanded', String(!content.hidden));
+      if (!content.hidden) { ++gradeGeneration; grades.replaceChildren(); void load(true); }
+    };
+    more.onclick = () => void load();
+    content.append(status, list, more, grades); adminPanel.append(heading, toggle, content);
+  }
   googleProvider.setCustomParameters({ prompt: 'select_account' });
   const api = {
     loginGoogle: () => authSDK.signInWithPopup(auth, googleProvider),
@@ -51,6 +144,7 @@ async function initialize() {
   let busy = false;
   const service = createCloudService(api, {
     identity(user) {
+      renderAdmin(user);
       window.QuizLocal.switchUser(user?.uid || null);
       $('accountLoggedOut').hidden = !!user;
       $('accountLoggedIn').hidden = !user;

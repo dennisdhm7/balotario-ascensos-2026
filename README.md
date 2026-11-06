@@ -1,5 +1,7 @@
 # Balotario de Ascensos CGBVP 2026
 
+Administración de usuarios para `dark815@gmail.com`: consulta [activación y funcionamiento del panel](docs/administracion.md). Requiere desplegar Cloud Functions y las reglas actuales además de publicar la web.
+
 Aplicación web de práctica y simulacros basada en el PDF de 200 preguntas aportado por el usuario.
 
 ## Publicación

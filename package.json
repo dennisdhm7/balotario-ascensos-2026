@@ -2,7 +2,7 @@
   "name": "balotario-ascensos-2026",
   "private": true,
   "scripts": {
-    "test": "node --test tests/quiz.test.cjs tests/cloud.test.mjs",
+    "test": "node --test tests/quiz.test.cjs tests/cloud.test.mjs tests/admin.test.mjs",
     "test:rules": "firebase emulators:exec --only firestore --project demo-balotario-2026 \"node --test tests/firestore.rules.test.mjs\""
   },
   "devDependencies": {

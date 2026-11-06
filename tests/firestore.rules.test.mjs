@@ -17,6 +17,18 @@ before(async () => {
 after(async () => { await env?.cleanup(); });
 const db = (uid, verified = true) => env.authenticatedContext(uid, { email_verified: verified }).firestore();
 
+test('el marcador de eliminación bloquea tokens anteriores y no lo puede retirar el usuario', async () => {
+  const uid = 'deleted-account', client = db(uid);
+  await assertSucceeds(setDoc(doc(client, `users/${uid}/attempts/old`), data()));
+  await env.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), `users/${uid}`), { deleting: true });
+  });
+  await assertFails(getDoc(doc(client, `users/${uid}/attempts/old`)));
+  await assertFails(setDoc(doc(client, `users/${uid}/attempts/new`), data()));
+  await assertFails(setDoc(doc(client, `users/${uid}/practice/1`), { correct: true, date: 1000, updatedAt: serverTimestamp() }));
+  await assertFails(deleteDoc(doc(client, `users/${uid}`)));
+});
+
 test('solo el propietario verificado crea y consulta su historial', async () => {
   const a = db('A'), b = db('B');
   const path = 'users/A/attempts/valid';
